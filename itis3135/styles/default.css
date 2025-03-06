@@ -3,17 +3,17 @@ body {
     color: #d1d5db;
     font-family: sans-serif;
     line-height: 1.6;
-    max-width: 800px; /* Applying the maximum width */
-    margin: 0 auto; /* Centering the content */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 a {
     color: #66bb6a;
-    text-decoration: none;
+    text-decoration: none; /* Removed underline */
 }
 
 a:hover {
-    text-decoration: underline;
+    /* Removed underline */
 }
 
 h1, h2, h3 {
@@ -58,8 +58,8 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-    background-color: #dfdfe2;
-    color: #1b1b32;
+    background-color: #555; /* Darker hover background */
+    color: #dfdfe2; /* Keep the text light */
     cursor: pointer;
 }
 
@@ -75,28 +75,12 @@ li > a {
     margin: 10px 0;
 }
 
-.introduction-section {
-    background-color: #373e4a;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #d1d5db;
-}
-
-.introduction-section img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px; /* Adjust the radius as needed */
-}
-
 main {
     background-color: #373e4a;
     color: #d1d5db;
     max-width: 800px;
     margin: 20px auto;
-    padding: 10px 20px; /* Reduced top/bottom padding */
+    padding: 10px 20px;
     line-height: 1.6;
 }
 
@@ -106,9 +90,9 @@ main h1, main h2, main h3 {
 
 main a {
     color: #66bb6a;
-    text-decoration: none;
+    text-decoration: none; /* Removed underline */
 }
 
 main a:hover {
-    text-decoration: underline;
+    /* Removed underline */
 }
