@@ -128,3 +128,53 @@ main a {
 .footer-items a {
   color: #66bb6a;
 }
+
+.header, #header {
+    background-color: #3e4451; /* A slightly lighter dark gray for the header */
+    padding: 10px; /* Add padding for visual spacing */
+}
+
+footer {
+    background-color: #3e4451;
+    padding: 10px;
+    color: #d1d5db;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #66bb6a;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.footer-info p {
+    margin: 0 10px;
+}
+
+footer a#validation_link_html, footer a#validation_link_css {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
