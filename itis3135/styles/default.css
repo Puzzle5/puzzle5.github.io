@@ -9,11 +9,7 @@ body {
 
 a {
     color: #66bb6a;
-    text-decoration: none; /* Removed underline */
-}
-
-a:hover {
-    /* Removed underline */
+    text-decoration: none;
 }
 
 h1, h2, h3 {
@@ -58,8 +54,8 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-    background-color: #555; /* Darker hover background */
-    color: #dfdfe2; /* Keep the text light */
+    background-color: #555;
+    color: #dfdfe2;
     cursor: pointer;
 }
 
@@ -90,9 +86,21 @@ main h1, main h2, main h3 {
 
 main a {
     color: #66bb6a;
-    text-decoration: none; /* Removed underline */
+    text-decoration: none;
 }
 
-main a:hover {
-    /* Removed underline */
+.introduction-section {
+    background-color: #373e4a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #d1d5db;
+}
+
+.introduction-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
 }
