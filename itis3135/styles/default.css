@@ -111,3 +111,20 @@ main a {
     margin-top: 5px; /* Add some space above the caption */
     color: #999; /* A lighter color for the caption */
 }
+
+.footer-items {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 10px; /* Add space above */
+    margin-bottom: 10px; /* add space below */
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.footer-items p {
+    margin: 0 10px; /* Add spacing between items */
+}
+
+.footer-items a {
+  color: #66bb6a;
+}
