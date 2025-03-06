@@ -161,7 +161,7 @@ footer nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Updated hover rule to exclude separators */
+/* Increased specificity of hover rule */
 footer nav ul li:not(.separator):hover {
     background-color: #555;
     color: #dfdfe2;
