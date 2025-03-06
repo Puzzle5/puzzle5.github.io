@@ -104,3 +104,10 @@ main a {
     margin-top: 20px;
     border-radius: 10px;
 }
+
+.introduction-section figcaption {
+    font-style: italic; /* Make the caption italic */
+    text-align: center; /* Center the caption */
+    margin-top: 5px; /* Add some space above the caption */
+    color: #999; /* A lighter color for the caption */
+}
