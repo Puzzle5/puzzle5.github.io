@@ -189,11 +189,8 @@ footer a#validation_link_html, footer a#validation_link_css {
 
 .validator-container {
     display: flex;
-    justify-content: center; /* Center the validators horizontally */
-    align-items: center; /* Center the validators vertically */
-    margin: 10px auto; /* Add vertical margin and center the container */
-}
-
-.validator-container a {
-    margin: 0 10px; /* Adjust spacing between validator links */
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    gap: 20px; /* Adjust the gap value as needed */
 }
