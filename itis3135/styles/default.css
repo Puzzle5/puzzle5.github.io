@@ -192,5 +192,11 @@ footer a#validation_link_html, footer a#validation_link_css {
     justify-content: center;
     align-items: center;
     margin: 10px auto;
-    gap: 20px; /* Adjust the gap value as needed */
+    gap: 20px;
+}
+
+.validator-container img {
+    border: 0;
+    width: 88px;
+    height: 31px;
 }
