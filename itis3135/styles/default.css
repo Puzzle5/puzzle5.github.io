@@ -89,27 +89,29 @@ main a {
     text-decoration: none;
 }
 
-.introduction-section {
-    background-color: #373e4a;
-    padding: 20px;
+main figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #d1d5db;
 }
 
-.introduction-section img {
+main img {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
     border-radius: 10px;
 }
 
-.introduction-section figcaption {
+main figcaption {
     font-style: italic;
     text-align: center;
     margin-top: 5px;
     color: #999;
+}
+
+main ul {
+    padding: 20px;
+    color: #d1d5db;
 }
 
 .footer-items {
@@ -179,7 +181,12 @@ footer nav ul li:not(.separator):hover {
     margin: 0 10px;
 }
 
-/* Validator Container Styles */
+footer a#validation_link_html, footer a#validation_link_css {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+
 .validator-container {
     display: flex;
     justify-content: center;
@@ -187,5 +194,5 @@ footer nav ul li:not(.separator):hover {
 }
 
 .validator-container a {
-    margin: 0 5px; /* Add spacing between validator links */
+    margin: 0 5px;
 }
