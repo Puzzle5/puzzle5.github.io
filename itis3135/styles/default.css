@@ -112,6 +112,7 @@ main figcaption {
 main ul {
     padding: 20px;
     color: #d1d5db;
+    margin-top: 0;
 }
 
 .footer-items {
@@ -135,32 +136,10 @@ main ul {
     background-color: #3e4451;
     padding: 10px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-}
-
-.header-content {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensure header-content takes full width */
-    justify-content: space-between; /* Space logo/h1 */
 }
 
-.header .logo {
-    max-height: 50px;
-    margin-right: 20px;
-}
-
-.header nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0; /* Add top margin for spacing */
-}
-
-.header nav ul li {
-    margin: 0 10px;
-}
 footer {
     background-color: #3e4451;
     padding: 10px;
