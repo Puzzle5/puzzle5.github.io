@@ -1,152 +1,227 @@
-/* Existing CSS Palette and Max-Width Styles (from previous response) */
 :root {
-  --primary-dark: #333333;
-  --primary-medium: #555555;
-  --primary-light: #f0f0f0;
-  --accent-gold: #D4AF37;
-  --accent-rust: #B87333;
-  --accent-slate: #708090;
+    --primary-dark: #333;
+    --primary-medium: #555;
+    --primary-light: #f9f9f9;
+    --accent-blue: #3498DB;
+    --accent-grey: #ddd;
+    --accent-green: #27AE60;
+    --accent-orange: #E67E22;
+    --accent-teal: #1ABC9C;
+    --header-footer-bg: #e9e9e9;
+    --section-bg: #f5f5f5; /* Slightly darker than body */
+    --profile-bg: #f0f0f0; /* Slightly darker than section */
+    --header-footer-link: #3498DB;
+    --nav-list-item-color: #555;
+    --nav-list-item-hover-bg: #ddd;
+    --nav-list-item-hover-color: #333;
 }
 
 body {
-  color: var(--primary-dark);
-  background-color: var(--primary-light);
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--primary-dark);
+    color: var(--primary-dark);
 }
 
 a {
-  color: var(--accent-gold);
+    color: var(--accent-blue);
+    text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent-rust);
+    color: #2980B9;
+    text-decoration: underline;
 }
 
 .header, .footer {
-  background-color: var(--accent-slate);
-  color: var(--primary-light);
+    background-color: var(--header-footer-bg);
+    color: var(--primary-medium);
+    border-bottom: 1px solid var(--accent-grey);
+    border-top: 1px solid var(--accent-grey);
+    padding: 10px 20px;
+}
+
+.header nav ul, .footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+.header nav li, .footer nav li {
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+    color: var(--nav-list-item-color);
+}
+
+.header nav li:hover, .footer nav li:hover {
+    background-color: var(--nav-list-item-hover-bg);
+    color: var(--nav-list-item-hover-color);
+    cursor: pointer;
+}
+
+.header nav a, .footer nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header nav a:hover, .footer nav a:hover {
+    color: var(--nav-list-item-hover-color);
+    text-decoration: none;
 }
 
 button, .cta-button {
-  background-color: var(--accent-gold);
-  color: var(--primary-dark);
-  border: none;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover, .cta-button:hover {
-  background-color: var(--accent-rust);
-  color: var(--primary-light);
+    background-color: #2980B9;
 }
 
 .card, .section {
-  background-color: --accent-slate;
-  border: 1px solid var(--primary-light);
+    background-color: var(--section-bg); /* Use the new section background */
+    border: 1px solid var(--accent-grey);
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 780px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .highlight {
-  color: var(--accent-gold);
+    color: var(--accent-blue);
 }
 
 .border-bottom {
-  border-bottom: 2px solid var(--primary-medium);
+    border-bottom: 1px solid var(--accent-grey);
 }
 
 .border-top {
-  border-top: 2px solid var(--primary-medium);
+    border-top: 1px solid var(--accent-grey);
 }
 
 .border-left {
-  border-left: 2px solid var(--primary-medium);
+    border-left: 1px solid var(--accent-grey);
 }
 
 .border-right {
-  border-right: 2px solid var(--primary-medium);
+    border-right: 1px solid var(--accent-grey);
 }
 
-.slate-text {
-  color: var(--accent-slate);
+.grey-text {
+    color: var(--primary-medium);
 }
 
-.rust-text {
-  color: var(--accent-rust);
+.green-text {
+    color: var(--accent-green);
 }
 
-.gold-text {
-  color: var(--accent-gold);
+orange-text {
+    color: var(--accent-orange);
 }
 
-.container, .header, .footer, .section, main { /* Added main selector here */
-  max-width: 780px; /* Adjust as needed */
-  margin: 0 auto;
-  padding: 0 20px;
+teal-text {
+    color: var(--accent-teal);
+}
+
+.container, .header, .footer, .section, main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
-  .container, .header, .footer, .section, main { /* Added main selector here */
-    padding: 0 10px;
-  }
+    .container, .header, .footer, .section, main {
+        padding: 0 10px;
+    }
 }
 
-/* Main Element Styling */
 main {
-  padding: 40px 20px; /* Add vertical padding */
+    padding: 20px 20px;
+    box-sizing: border-box;
 }
 
 main h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 main p {
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 main ul {
     list-style-type: disc;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 main ol {
     list-style-type: decimal;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 main img {
-    max-width: 100%; /* Make images responsive */
+    max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
+.gap-div {
+    height: 20px;
+    background-color: transparent;
+}
+
+.gap-div.separator {
+    border-bottom: 1px solid var(--accent-grey);
+    height: 10px;
+    margin: 5px 0;
+}
 
 .profile-container {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    max-width: 600px; /* Adjust as needed */
+    align-items: flex-start;
+    max-width: 780px;
     margin: 20px auto;
-    border: 1px solid #ddd;
+    border: 1px solid var(--accent-grey);
     padding: 20px;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: var(--profile-bg); /* use the new profile background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
-    flex: 0 0 150px; /* Fixed width for the image */
+    flex: 0 0 150px;
     margin-right: 20px;
 }
 
 .profile-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%;
 }
 
 .profile-text {
-    flex: 1; /* Allow text to take remaining space */
+    flex: 1;
 }
 
 .profile-text p {
@@ -158,14 +233,13 @@ main img {
     text-align: center;
     margin-top: 20px;
     font-style: italic;
-    color: #777;
+    color: var(--primary-medium);
 }
 
-/* Responsive adjustments */
 @media (max-width: 500px) {
     .profile-container {
-        flex-direction: column; /* Stack image and text on smaller screens */
-        align-items: center; /* Center items on smaller screens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-image {
@@ -174,76 +248,6 @@ main img {
     }
 
     .profile-text {
-        text-align: center; /* Center text on smaller screens */
+        text-align: center;
     }
-}
-nav {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	background-color: #282828;
-}
-
-/*nav {
-  width: 50%;
-  max-width: 300px;
-  height: 50px;
-}*/
-
-nav > ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-inline-start: 0;
-  margin-block: 0;
-  height: 100%;
-}
-
-nav > ul > li {
-  color: #dfdfe2;
-  margin: 0 0.2rem;
-  padding: 0.2rem;
-  display: block;
-}
-
-nav > ul > li:hover {
-  background-color: #dfdfe2;
-  color: #1b1b32;
-  cursor: pointer;
-}
-
-li > a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.section-gap {
-  margin-bottom: 40px; /* Adjust the gap size as needed */
-}
-
-/* Optional: Add a visual separator */
-.section-gap.separator {
-  border-bottom: 1px solid #ddd; /* Light grey separator */
-  padding-bottom: 20px; /* Add some space between the separator and the next section */
-}
-
-.gap-div {
-  height: 40px; /* Adjust the gap height as needed */
-  background-color: transparent; /* Or any background you prefer */
-}
-
-/* Optional: Add a visual separator */
-.gap-div.separator {
-  border-bottom: 1px solid #ddd; /* Light grey separator */
-  height: 20px; /* Adjust height to accommodate border */
-  margin: 10px 0; /* Center the border visually */
-}
-
-/* Example Section Styles (for demonstration) */
-.section {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #eee;
-  margin-bottom: 0; /* Remove default margins */
 }
