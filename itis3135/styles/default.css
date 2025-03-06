@@ -129,7 +129,7 @@ main a {
   color: #66bb6a;
 }
 
-.header, #header {
+.header {
     background-color: #3e4451; /* A slightly lighter dark gray for the header */
     padding: 10px; /* Add padding for visual spacing */
 }
@@ -161,7 +161,6 @@ footer nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Increased specificity of hover rule */
 footer nav ul li:not(.separator):hover {
     background-color: #555;
     color: #dfdfe2;
