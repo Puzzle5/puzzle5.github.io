@@ -161,6 +161,13 @@ footer nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Updated hover rule to exclude separators */
+footer nav ul li:not(.separator):hover {
+    background-color: #555;
+    color: #dfdfe2;
+    cursor: pointer;
+}
+
 .footer-info {
     display: flex;
     justify-content: center;
