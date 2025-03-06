@@ -1,35 +1,62 @@
-       :root {
-    /** Base colors */
-    --clr-dark-a0: #000000:
-    --clr-light-a0: #ffffff;
-    /** Dark theme primary colors */
+/* Dark Theme - Charlotte.edu Inspired */
 
-    --clr-primary-a0: #91ad82;
-    --clr-primary-a10: #9db68f;
-    --clr-primary-a20: #a9bf9d;
-    --clr-primary-a30: #b5c8aa;
-    --clr-primary-a40: #c1d1b8;
-    --clr-primary-a50: #cddac6;
-
-    /** Dark theme surface colors */
-
-    --clr-surface-a0: #121212;
-    --clr-surface-a10: #282828;
-    --clr-surface-a20: #3f3f3f;
-    --clr-surface-a30: #575757;
-    --clr-surface-a40: #717171;
-    --clr-surface-a50: #8b8b8b;
-
-    /** Dark theme tonal surface colors */
-
-    --clr-surface-tonal-a0: #1d201c;
-    --clr-surface-tonal-a10: #323531;
-    --clr-surface-tonal-a20: #484b47;
-    --clr-surface-tonal-a30: #60625f;
-    --clr-surface-tonal-a40: #787a77;
-    --clr-surface-tonal-a50: #919391;
-
+:root {
+  --dark-bg: #121212; /* Dark background */
+  --dark-primary: #34685f; /* Darker, muted green */
+  --dark-primary-light: #528c81; /* Slightly lighter primary for highlights */
+  --dark-secondary: #a8914b; /* Darker, muted gold/yellow */
+  --dark-secondary-light: #c2b069; /* Slightly lighter secondary for highlights */
+  --dark-neutral-1: #282828; /* Darker neutral gray */
+  --dark-neutral-2: #3f3f3f; /* Medium dark neutral gray */
+  --dark-neutral-3: #666666; /* Lighter dark neutral gray */
+  --dark-text: #e0e0e0; /* Light text for readability */
+  --dark-text-secondary: #bdbdbd; /* slightly less bright text */
+  --dark-accent: #8ab4f8; /* Blue accent for links or interactive elements */
 }
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+a {
+  color: var(--dark-accent);
+}
+
+/* Example Usage (Illustrative) */
+.primary-bg {
+  background-color: var(--dark-primary);
+  color: var(--dark-text);
+}
+
+.secondary-bg {
+  background-color: var(--dark-secondary);
+  color: var(--dark-text);
+}
+
+.neutral-bg-1 {
+  background-color: var(--dark-neutral-1);
+  color: var(--dark-text);
+}
+
+.neutral-bg-2 {
+  background-color: var(--dark-neutral-2);
+  color: var(--dark-text);
+}
+
+.neutral-bg-3 {
+  background-color: var(--dark-neutral-3);
+  color: var(--dark-text);
+}
+
+.primary-text {
+    color: var(--dark-primary-light);
+}
+
+.secondary-text {
+    color: var(--dark-secondary-light);
+}
+
 
 a {
 	color: #FFFFFF;
