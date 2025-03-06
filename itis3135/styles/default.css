@@ -135,20 +135,6 @@ main ul {
 .header {
     background-color: #3e4451;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header nav ul li {
-    margin: 0 10px;
 }
 
 footer {
