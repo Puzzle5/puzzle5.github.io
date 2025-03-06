@@ -1,0 +1,179 @@
+/* Existing CSS Palette and Max-Width Styles (from previous response) */
+:root {
+  --primary-dark: #333333;
+  --primary-medium: #555555;
+  --primary-light: #f0f0f0;
+  --accent-gold: #D4AF37;
+  --accent-rust: #B87333;
+  --accent-slate: #708090;
+}
+
+body {
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-dark);
+}
+
+a {
+  color: var(--accent-gold);
+}
+
+a:hover {
+  color: var(--accent-rust);
+}
+
+.header, .footer {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+button, .cta-button {
+  background-color: var(--accent-gold);
+  color: var(--primary-dark);
+  border: none;
+}
+
+button:hover, .cta-button:hover {
+  background-color: var(--accent-rust);
+  color: var(--primary-light);
+}
+
+.card, .section {
+  background-color: white;
+  border: 1px solid var(--primary-light);
+}
+
+.highlight {
+  color: var(--accent-gold);
+}
+
+.border-bottom {
+  border-bottom: 2px solid var(--primary-medium);
+}
+
+.border-top {
+  border-top: 2px solid var(--primary-medium);
+}
+
+.border-left {
+  border-left: 2px solid var(--primary-medium);
+}
+
+.border-right {
+  border-right: 2px solid var(--primary-medium);
+}
+
+.slate-text {
+  color: var(--accent-slate);
+}
+
+.rust-text {
+  color: var(--accent-rust);
+}
+
+.gold-text {
+  color: var(--accent-gold);
+}
+
+.container, .header, .footer, .section, main { /* Added main selector here */
+  max-width: 780px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container, .header, .footer, .section, main { /* Added main selector here */
+    padding: 0 10px;
+  }
+}
+
+/* Main Element Styling */
+main {
+  padding: 40px 20px; /* Add vertical padding */
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+
+main p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+main ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+main img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+.profile-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    max-width: 600px; /* Adjust as needed */
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.profile-image {
+    flex: 0 0 150px; /* Fixed width for the image */
+    margin-right: 20px;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+}
+
+.profile-text {
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.profile-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.profile-bottom-text {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .profile-container {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        align-items: center; /* Center items on smaller screens */
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .profile-text {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
