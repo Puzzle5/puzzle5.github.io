@@ -1,125 +1,76 @@
-/* Dark Theme - Charlotte.edu Inspired */
-
-:root {
-  --dark-bg: #121212; /* Dark background */
-  --dark-primary: #34685f; /* Darker, muted green */
-  --dark-primary-light: #528c81; /* Slightly lighter primary for highlights */
-  --dark-secondary: #a8914b; /* Darker, muted gold/yellow */
-  --dark-secondary-light: #c2b069; /* Slightly lighter secondary for highlights */
-  --dark-neutral-1: #282828; /* Darker neutral gray */
-  --dark-neutral-2: #3f3f3f; /* Medium dark neutral gray */
-  --dark-neutral-3: #666666; /* Lighter dark neutral gray */
-  --dark-text: #e0e0e0; /* Light text for readability */
-  --dark-text-secondary: #bdbdbd; /* slightly less bright text */
-  --dark-accent: #8ab4f8; /* Blue accent for links or interactive elements */
-}
-
 body {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
+    background-color: #282c34;
+    color: #d1d5db;
+    font-family: sans-serif;
+    line-height: 1.6;
+    max-width: 800px; /* Applying the maximum width */
+    margin: 0 auto; /* Centering the content */
 }
 
 a {
-  color: var(--dark-accent);
+    color: #66bb6a;
+    text-decoration: none;
 }
 
-/* Example Usage (Illustrative) */
-.primary-bg {
-  background-color: var(--dark-primary);
-  color: var(--dark-text);
+a:hover {
+    text-decoration: underline;
 }
 
-.secondary-bg {
-  background-color: var(--dark-secondary);
-  color: var(--dark-text);
+h1, h2, h3 {
+    color: #98c379;
 }
 
-.neutral-bg-1 {
-  background-color: var(--dark-neutral-1);
-  color: var(--dark-text);
+.button, button {
+    background-color: #66bb6a;
+    color: #282c34;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.neutral-bg-2 {
-  background-color: var(--dark-neutral-2);
-  color: var(--dark-text);
+.button:hover, button:hover {
+    background-color: #81c784;
 }
 
-.neutral-bg-3 {
-  background-color: var(--dark-neutral-3);
-  color: var(--dark-text);
-}
-
-.primary-text {
-    color: var(--dark-primary-light);
-}
-
-.secondary-text {
-    color: var(--dark-secondary-light);
-}
-
-
-a {
-	color: #FFFFFF;
-}
-
-body {
-	color: #ffffff;
-	background-color: #121212;
-	margin: 0;
-}
-header, main, section, footer {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	max-width: 750px;
-	background-color: #282828;
-}
-main, header, nav {
-	align-content: center;
-}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 nav {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	background-color: #282828;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #282828;
 }
-
-/*nav {
-  width: 50%;
-  max-width: 300px;
-  height: 50px;
-}*/
 
 nav > ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-inline-start: 0;
-  margin-block: 0;
-  height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
 }
 
 nav > ul > li {
-  color: #dfdfe2;
-  margin: 0 0.2rem;
-  padding: 0.2rem;
-  display: block;
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
 }
 
 nav > ul > li:hover {
-  background-color: #dfdfe2;
-  color: #1b1b32;
-  cursor: pointer;
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
 }
 
 li > a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #373e4a;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
 }
