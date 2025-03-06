@@ -106,32 +106,32 @@ main a {
 }
 
 .introduction-section figcaption {
-    font-style: italic; /* Make the caption italic */
-    text-align: center; /* Center the caption */
-    margin-top: 5px; /* Add some space above the caption */
-    color: #999; /* A lighter color for the caption */
+    font-style: italic;
+    text-align: center;
+    margin-top: 5px;
+    color: #999;
 }
 
 .footer-items {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: 10px; /* Add space above */
-    margin-bottom: 10px; /* add space below */
-    flex-wrap: wrap; /* allow wrapping on small screens */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-items p {
-    margin: 0 10px; /* Add spacing between items */
+    margin: 0 10px;
 }
 
 .footer-items a {
-  color: #66bb6a;
+    color: #66bb6a;
 }
 
 .header {
-    background-color: #3e4451; /* A slightly lighter dark gray for the header */
-    padding: 10px; /* Add padding for visual spacing */
+    background-color: #3e4451;
+    padding: 10px;
 }
 
 footer {
@@ -161,6 +161,7 @@ footer nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Updated hover rule with footer specificity */
 footer nav ul li:not(.separator):hover {
     background-color: #555;
     color: #dfdfe2;
