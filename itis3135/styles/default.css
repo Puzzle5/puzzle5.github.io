@@ -203,3 +203,9 @@ footer a#validation_link_html, footer a#validation_link_css {
         padding: 5px;
     }
 }
+
+header, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
