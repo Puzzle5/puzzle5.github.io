@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Sketching Adventures</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/default.css">
+</head>
+<body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                section.classList.remove('show');
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            document.getElementById(sectionId).classList.add('show');
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                showSection(sectionId);
+            });
+        });
+
+        // Show the "what" section by default
+        showSection('what');
+    });
+</script>
+    <header>
+        <h1>Urban Sketching Adventures</h1>
+        <nav>
+            <a href="#what">What</a> <span class="divider">|</span>
+            <a href="#who">Who</a> <span class="divider">|</span>
+            <a href="#when">When</a> <span class="divider">|</span>
+            <a href="#where">Where</a> <span class="divider">|</span>
+            <a href="#how">How</a> <span class="divider">|</span>
+            <a href="#why">Why</a> <span class="divider">|</span>
+            <a href="#ai">AI Prompts</a>
+        </nav>
+    </header>
+    <main>
+        <section id="what">
+            <h2>What is Urban Sketching?</h2>
+            <p>Urban sketching is the practice of drawing on location, capturing the essence of life and places around us. It's about documenting the world in real-time, using various mediums like pen, ink, watercolor, and more. It's about seeing and feeling the city with a fresh perspective.</p>
+            <p>Whether it's a bustling market, a quiet cafe, or a grand architectural landmark, urban sketching allows you to connect with your surroundings and express your unique vision.</p>
+            <figure>
+                <img src="images/sketch1.jpg" alt="A busy street scene captured in a sketch.">
+                <figcaption>A sketch of a vibrant market square.</figcaption>
+                <p class="prompt"><i>Prompt: A detailed sketch of a busy European market square, with people and stalls, in a watercolor style.</i></p>
+            </figure>
+        </section>
+
+        <section id="who" class="hidden">
+            <h2>Who are Urban Sketchers?</h2>
+            <p>Urban sketchers come from all walks of life. They are artists, architects, designers, students, and hobbyists who share a passion for drawing on location. Anyone with a sketchbook and a desire to capture their surroundings can be an urban sketcher.</p>
+            <p>The urban sketching community is global and welcoming. There are local groups and online communities where sketchers share their work, exchange tips, and organize sketch crawls.</p>
+            <figure>
+                <img src="images/sketch2.jpg" alt="A group of people sketching in a park.">
+                <figcaption>A group of sketchers capturing a park scene.</figcaption>
+                <p class="prompt"><i>Prompt: A group of diverse people sitting and sketching in a sunny park, using various art supplies, in a hand-drawn style.</i></p>
+            </figure>
+        </section>
+
+        <section id="when" class="hidden">
+            <h2>When to Sketch?</h2>
+            <p>There's no specific time to sketch. You can sketch at any time of day, in any weather. Early mornings and late afternoons offer beautiful light and shadows, while rainy days can add a unique atmosphere to your sketches.</p>
+            <p>Sketching during travel is a fantastic way to document your experiences. You can also sketch during your daily commute, lunch breaks, or weekends. The key is to find moments to observe and capture your surroundings.</p>
+            <figure>
+                <img src="images/sketch3.jpg" alt="A sketch of a sunset over a city skyline.">
+                <figcaption>A sunset sketch over the cityscape.</figcaption>
+                <p class="prompt"><i>Prompt: A vibrant sunset over a city skyline, captured in a quick sketch using warm colors, in an impressionistic style.</i></p>
+            </figure>
+        </section>
+
+        <section id="where" class="hidden">
+            <h2>Where to Sketch?</h2>
+            <p>Anywhere! Cities, towns, parks, cafes, museums, markets, and even your own backyard can be a source of inspiration. Look for interesting perspectives, architectural details, and scenes of everyday life.</p>
+            <p>Exploring new neighborhoods and cities is a great way to discover new sketching spots. You can also join local sketch crawls and events to meet fellow sketchers and explore new places together.</p>
+            <figure>
+                <img src="images/sketch4.jpg" alt="A sketch of a cozy cafe interior.">
+                <figcaption>A cozy cafe interior sketch.</figcaption>
+                <p class="prompt"><i>Prompt: An interior sketch of a cozy cafe with warm lighting, filled with people, in a detailed pen and ink style.</i></p>
+            </figure>
+        </section>
+
+        <section id="how" class="hidden">
+            <h2>How to Start Urban Sketching?</h2>
+            <p>Start with simple tools like a sketchbook and a pen or pencil. Focus on capturing the overall composition and shapes rather than details. Don't worry about perfection; it's about the process and capturing your impressions.</p>
+            <p>Experiment with different mediums like watercolor, ink, and markers. Join online communities and watch tutorials to learn new techniques and gain inspiration. Most importantly, practice regularly and enjoy the journey.</p>
+            <figure>
+                <img src="images/sketch5.jpg" alt="A sketch of various art supplies laid out on a table.">
+                <figcaption>A collection of urban sketching supplies.</figcaption>
+                <p class="prompt"><i>Prompt: A flat lay of various urban sketching supplies, including pens, pencils, watercolors, and a sketchbook, in a clean and organized style.</i></p>
+            </figure>
+        </section>
+
+        <section id="why" class="hidden">
+            <h2>Why Urban Sketch?</h2>
+            <p>Urban sketching helps you see the world with a fresh perspective. It encourages you to slow down, observe, and appreciate the beauty in everyday life. It's a form of mindfulness and a way to connect with your surroundings.</p>
+            <p>It also improves your drawing skills, develops your observation abilities, and creates a visual diary of your experiences. Plus, it's a fun and rewarding hobby that you can enjoy anywhere, anytime.</p>
+            <figure>
+                <img src="images/sketch6.jpg" alt="A sketch of a person drawing in a sketchbook outdoors.">
+                <figcaption>A person sketching outdoors.</figcaption>
+                <p class="prompt"><i>Prompt: A person sitting on a bench, sketching in a sketchbook outdoors, capturing a street scene, in a dynamic and expressive style.</i></p>
+            </figure>
+        </section>
+
+        <section id="ai" class="hidden">
+            <h2>AI Prompts</h2>
+            <p>All images in this page were generated using AI. The prompts used are provided below each figure.</p>
+            <ul>
+                <li>Prompt 1: A detailed sketch of a busy European market square, with people and stalls, in a watercolor style.</li>
+                <li>Prompt 2: A group of diverse people sitting and sketching in a sunny park, using various art supplies, in a hand-drawn style.</li>
+                <li>Prompt 3: A vibrant sunset over a city skyline, captured in a quick sketch using warm colors, in an impressionistic style.</li>
+                <li>Prompt 4: An interior sketch of a cozy cafe with warm lighting, filled with people, in a detailed pen and ink style.</li>
+                <li>Prompt 5: A flat lay of various urban sketching supplies, including pens, pencils, watercolors, and a sketchbook, in a clean and organized style.</li>
+                <li>Prompt 6: A person sitting on a bench, sketching in a sketchbook outdoors, capturing a street scene, in a dynamic and expressive style.</li>
+            </ul>
+        </section>
+
+    </main>
+
+     <footer>
+        <p>Designed by [Your Design Firm Name]</p>
+        <p>
+            <button onclick="window.location.href='http://validator.w3.org/check?uri=' + window.location.href">HTML</button>
+            <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/validator?uri=' + window.location.href">CSS</button>
+            <button onclick="window.open('https://wave.webaim.org/report#/https://webpages.charlotte.edu/UNCCID/itis3135/hobby/index.html', '_blank')">Accessibility</button>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    section.classList.remove('show');
+                    section.classList.add('hidden');
+                });
+                document.getElementById(sectionId).classList.remove('hidden');
+                document.getElementById(sectionId).classList.add('show');
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const sectionId = this.getAttribute('href').substring(1);
+                    showSection(sectionId);
+                });
+            });
+
+            // Show the "what" section by default
+            showSection('what');
+        });
+    </script>
+</body>
+</html>
