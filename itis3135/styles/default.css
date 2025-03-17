@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+body, main, header, footer, nav, ul, li, a, button, input, textarea, select {
     box-sizing: inherit;
 }
 
