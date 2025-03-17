@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f0ec;
-    color: #333;
+    color: #333; /* Default text color to dark gray */
     line-height: 1.6;
 }
 
 header {
     background-color: #6a5acd;
-    color: #f8f8f8; /* Changed white to #f8f8f8 */
+    color: #f8f8f8;
     text-align: center;
     padding: 1em 0;
     position: sticky;
@@ -26,7 +26,7 @@ nav {
 }
 
 nav a {
-    color: #f8f8f8; /* Changed white to #f8f8f8 */
+    color: #f8f8f8;
     text-decoration: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -37,7 +37,7 @@ nav a:hover {
 }
 
 .divider {
-    color: #f8f8f8; /* Changed white to #f8f8f8 */
+    color: #f8f8f8;
     padding: 0 5px;
 }
 
@@ -49,7 +49,7 @@ main {
 
 section {
     margin-bottom: 30px;
-    background-color: #f8f8f8; /* Changed white to #f8f8f8 */
+    background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -67,20 +67,20 @@ figure {
 }
 
 figure img {
-    max-width: 100%;
+    max--width: 100%;
     height: auto;
     border-radius: 4px;
 }
 
 figcaption {
     font-style: italic;
-    color: #777;
+    color: #777; /* Default figcaption color to lighter gray */
     margin-top: 5px;
 }
 
 .prompt {
     font-style: italic;
-    color: #888;
+    color: #888; /* Default prompt color to lighter gray */
     text-align: center;
     margin-top: 10px;
 }
@@ -107,8 +107,12 @@ footer a:hover {
 }
 
 /* Additional Styling for Links */
-a {
-    color: inherit;
+a,
+a:link,
+a:visited,
+a:active,
+a:focus {
+    color: #6a5acd;
     text-decoration: none;
 }
 
