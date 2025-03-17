@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    function showSection(sectionId) {
+        sections.forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            const targetSectionId = this.dataset.section;
-
-            sections.forEach(section => {
-                if (section.id === targetSectionId) {
-                    section.classList.remove('hidden');
-                } else {
-                    section.classList.add('hidden');
-                }
-            });
+            const sectionId = link.getAttribute('data-section');
+            showSection(sectionId);
         });
     });
+
+    // Show the "what" section by default
+    showSection('what');
 });
