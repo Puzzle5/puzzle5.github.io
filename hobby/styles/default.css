@@ -2,13 +2,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f0ec; /* Light beige background */
+    background-color: #f4f0ec;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #6a5acd; /* Slate blue header */
+    background-color: #6a5acd;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -29,6 +29,7 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 nav a:hover {
@@ -108,9 +109,4 @@ footer button:hover {
 
 .hidden {
     display: none;
-}
-
-/* JavaScript Controlled Styling */
-.show {
-    display: block;
 }
