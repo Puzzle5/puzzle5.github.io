@@ -192,7 +192,6 @@ margin: 10px auto;
 
 @media (max-width: 768px) {
     main {
-        width: 95%;
         padding: 5px 10px;
     }
     nav > ul {
@@ -207,7 +206,6 @@ margin: 10px auto;
 
 @media (max-width: 480px) {
     main {
-        width: 100%;
         padding: 5px;
     }
 }
@@ -215,5 +213,4 @@ margin: 10px auto;
 header, footer {
     max-width: 1200px;
     margin: 0 auto;
-    width: 90%;
 }
