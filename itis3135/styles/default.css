@@ -169,10 +169,10 @@ footer nav ul li:not(.separator):hover {
     margin: 0 10px;
 }
 
-footer a#validation_link_html, footer a#validation_link_css {
-    display: block;
-    text-align: center;
-    margin: 10px auto;
+#validation_link_html, #validation_link_css {
+display: block;
+text-align: center;
+margin: 10px auto;
 }
 
 .validator-container {
