@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f0ec;
-    color: #333; /* Default text color to dark gray */
+    color: #333;
     line-height: 1.6;
 }
 
@@ -17,7 +17,7 @@ header {
     z-index: 100;
 }
 
-header h1 {
+h1 { /* Corrected: Removed header qualification */
     margin: 0;
 }
 
@@ -55,7 +55,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+h2 { /* Corrected: Removed section qualification */
     color: #6a5acd;
     border-bottom: 2px solid #6a5acd;
     padding-bottom: 10px;
@@ -67,20 +67,20 @@ figure {
 }
 
 figure img {
-    max--width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 4px;
 }
 
 figcaption {
     font-style: italic;
-    color: #777; /* Default figcaption color to lighter gray */
+    color: #777;
     margin-top: 5px;
 }
 
 .prompt {
     font-style: italic;
-    color: #888; /* Default prompt color to lighter gray */
+    color: #888;
     text-align: center;
     margin-top: 10px;
 }
