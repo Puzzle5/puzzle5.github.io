@@ -5,7 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Sketching Adventures</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f0ec;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6a5acd;
+            color: #f8f8f8;
+            text-align: center;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #f8f8f8;
+            text-decoration: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            color: #f8f8f8;
+            padding: 0 5px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6a5acd;
+            border-bottom: 2px solid #6a5acd;
+            padding-bottom: 10px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .prompt {
+            font-style: italic;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #eee;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #6a5acd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        a,
+        a:link,
+        a:visited,
+        a:active,
+        a:focus {
+            color: #6a5acd;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -49,7 +170,6 @@
             </figure>
             <p class="prompt"><i>Prompt: A detailed sketch of a busy European market square, with people and stalls, in a watercolor style.</i></p>
         </section>
-
         <section id="who" class="hidden">
             <h2>Who are Urban Sketchers?</h2>
             <p>Urban sketchers are a diverse and passionate group of individuals who share a love for drawing on location. They come from all walks of life, including professional artists, architects, designers, students, and hobbyists. What unites them is the desire to capture the world around them through sketching.</p>
@@ -197,7 +317,7 @@
             <p class="prompt"><i>Prompt: I need another sketch.</i></p>
         </section>
 
-        <section id="ai" class="hidden">
+<section id="ai" class="hidden">
             <h2>AI Prompts</h2>
             <p>The images used in this project were generated using AI. Here's a concise list of the prompts that were provided:</p>
             <ul>
@@ -223,6 +343,29 @@
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </footer>
 
-    <script src="scripts/hidden.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            function showSection(sectionId) {
+                sections.forEach(function(section) {
+                    section.classList.add('hidden');
+                });
+                document.getElementById(sectionId).classList.remove('hidden');
+            }
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const sectionId = link.getAttribute('data-section');
+                    showSection(sectionId);
+                });
+            });
+
+            // Show the "what" section by default
+            showSection('what');
+        });
+    </script>
 </body>
 </html>
