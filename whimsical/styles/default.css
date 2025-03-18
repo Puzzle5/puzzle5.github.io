@@ -30,7 +30,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -197,6 +196,7 @@ main {
 
 h2 {
     margin-bottom: 15px;
+    color: var(--primary-dark);
 }
 
 main p {
@@ -228,7 +228,7 @@ main img {
     background-color: transparent;
 }
 
-.gap-div.separator {
+.gap-div separator {
     border-bottom: 1px solid var(--accent-grey);
     height: 10px;
     margin: 5px 0;
