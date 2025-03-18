@@ -21,17 +21,20 @@
 
 body {
     color: var(--primary-dark);
-/*     background-color: var(--primary-light); */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-image: url('../images/8o2hys8o2hys8o2h.jpg');
-    background-size: cover; /* Fill the entire page */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    background-attachment: fixed; /* Keep image fixed during scrolling */
-    margin: 0; /* Remove default body margin */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--primary-dark);
 }
 
@@ -45,7 +48,8 @@ a:hover {
     text-decoration: underline;
 }
 
-.header, .footer {
+.header,
+.footer {
     background-color: var(--header-footer-bg);
     color: var(--primary-medium);
     border-bottom: 1px solid var(--accent-grey);
@@ -53,14 +57,16 @@ a:hover {
     padding: 10px 20px 10px;
 }
 
-.header nav, .footer nav {
+.header nav,
+.footer nav {
     background-color: var(--nav-bg);
     border-radius: 5px;
     padding: 5px;
     margin: 5px 0;
 }
 
-.header nav ul, .footer nav ul {
+.header nav ul,
+.footer nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -73,30 +79,35 @@ a:hover {
     height: 100%;
 }
 
-.header nav li, .footer nav li {
+.header nav li,
+.footer nav li {
     margin: 0 0.2rem;
     padding: 0.3rem 0.6rem;
     display: block;
     color: var(--nav-list-item-color);
 }
 
-.header nav li:hover, .footer nav li:hover {
+.header nav li:hover,
+.footer nav li:hover {
     background-color: var(--nav-list-item-hover-bg);
     color: var(--nav-list-item-hover-color);
     cursor: pointer;
 }
 
-.header nav a, .footer nav a {
+.header nav a,
+.footer nav a {
     color: inherit;
     text-decoration: none;
 }
 
-.header nav a:hover, .footer nav a:hover {
+.header nav a:hover,
+.footer nav a:hover {
     color: var(--nav-list-item-hover-color);
     text-decoration: none;
 }
 
-button, .cta-button {
+button,
+.cta-button {
     background-color: var(--accent-blue);
     color: white;
     border: none;
@@ -105,11 +116,13 @@ button, .cta-button {
     cursor: pointer;
 }
 
-button:hover, .cta-button:hover {
+button:hover,
+.cta-button:hover {
     background-color: #2980B9;
 }
 
-.card, .section {
+.card,
+.section {
     box-sizing: border-box;
     background-color: var(--section-bg);
     border: 1px solid var(--accent-grey);
@@ -156,7 +169,10 @@ teal-text {
     color: var(--accent-teal);
 }
 
-.container, .header, .footer, main {
+.container,
+.header,
+.footer,
+main {
     max-width: 780px;
     margin: 0 auto;
     padding: 0 20px;
@@ -164,7 +180,11 @@ teal-text {
 }
 
 @media (max-width: 768px) {
-    .container, .header, .footer, .section, main {
+    .container,
+    .header,
+    .footer,
+    .section,
+    main {
         padding: 0 10px;
     }
 }
@@ -175,7 +195,7 @@ main {
     background-color: var(--main-bg);
 }
 
-main h2 {
+h2 {
     margin-bottom: 15px;
 }
 
@@ -203,7 +223,7 @@ main img {
     margin: 15px auto;
 }
 
-gap-div {
+.gap-div {
     height: 20px;
     background-color: transparent;
 }
@@ -245,7 +265,6 @@ gap-div {
     margin-bottom: 10px;
     line-height: 1.6;
 }
-
 .profile-bottom-text {
     text-align: center;
     margin-top: 20px;
@@ -291,22 +310,26 @@ gap-div {
 }
 
 #validation_link_html img {
-    height: 20px;
-    width: auto;
-    vertical-align: middle;
+height: 20px;
+width: auto;
+vertical-align: middle;
 }
+
 main div,
 .section div {
     margin-bottom: 15px; /* Add space between paragraphs */
     line-height: 1.6; /* Add line height for readability */
 }
+
 .section div:last-child {
     margin-bottom: 0; /* Remove bottom margin from the last paragraph */
 }
+
 .header-main-gap {
     height: 20px; /* Adjust height as needed */
     background-color: transparent; /* Or any other color you prefer */
 }
+
 .header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -317,10 +340,11 @@ main div,
     border-top-right-radius: 10px;
 }
 
-main, .section {
+main,
+.section {
     border-radius: 10px;
 }
+
 .profile-container {
     border-radius: 10px; /* Rounds all four corners of the profile container */
 }
-
