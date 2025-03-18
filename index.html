@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle 5</title>
+    <title>Proud Cobra - Puzzle 5</title>
     <style>
         body {
             font-family: sans-serif;
@@ -11,9 +11,20 @@
             background-color: #1e1e1e;
             color: #d4d4d4;
             display: flex;
+            flex-direction: column; /* Stack header, main, footer */
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            flex-grow: 1; /* Allow main to expand and fill available space */
+            display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
 
         #container {
@@ -27,13 +38,16 @@
 
         h1 {
             color: #b5cea8;
-            text-align: center;
             margin-bottom: 20px;
         }
 
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .intro-text {
+            font-family: monospace;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
         }
 
         a {
@@ -74,26 +88,54 @@
             content: "||";
             margin-left: 10px;
         }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333; /* Darker footer background */
+        }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Puzzle 5</h1>
-        <p>This is a puzzle website. Each puzzle contains a picture, and a link to the next puzzle. Some puzzles may be harder than others. Have fun!</p>
+    <header>
+        <h1>Proud Cobra</h1>
+    </header>
 
-        <div class="puzzle-container">
-            <img src="https://puzzle5.github.io/images/puzzle5.png" alt="Puzzle 5">
+    <main>
+        <div id="container">
+            <div class="intro-text">
+                I'm Proud Cobra...
+
+                ...and this is the root of my website.
+
+                Below, you can navigate to my class projects.
+            </div>
+
+            <div class="puzzle-container">
+                <img src="https://puzzle5.github.io/images/puzzle5.png" alt="Puzzle 5">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/Puzzle5/puzzle5.github.io" target="_blank">GitHub.com</a></li>
+                    <li><a href="https://webpages.charlotte.edu/pchapin/" target="_blank">Home Page</a></li>
+                    <li><a href="https://puzzle5.github.io/" target="_blank">GitHub.io</a></li>
+                    <li><a href="itis3135/" target="_blank">Click to go to ITIS3135 Site</a></li>
+                    <li><a href="about:blank" target="_blank">[No LinkedIn]</a></li>
+                </ul>
+            </nav>
         </div>
+    </main>
 
+    <footer>
         <nav>
             <ul>
-                <li><a href="https://github.com/Puzzle5/puzzle5.github.io" target="_blank">GitHub.com</a></li>
-                <li><a href="https://webpages.charlotte.edu/pchapin/" target="_blank">Home Page</a></li>
-                <li><a href="https://puzzle5.github.io/" target="_blank">GitHub.io</a></li>
-                <li><a href="itis3135/" target="_blank">Click to go to ITIS3135 Site</a></li>
-                <li><a href="about:blank" target="_blank">[No LinkedIn]</a></li>
+                <li><a href="#">HTML Validation</a></li>
+                <li><a href="#">CSS Validation</a></li>
             </ul>
         </nav>
-    </div>
+    </footer>
+
+    <script src="scripts/your-script.js"></script>
 </body>
 </html>
