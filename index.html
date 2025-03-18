@@ -64,6 +64,31 @@
           margin-top: 10px;
         }
 
+        .bottom-links {
+          margin-top: 30px;
+          text-align: center;
+        }
+
+        .bottom-links a {
+          margin: 0 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav li:not(:last-child)::after {
+            content: "||";
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +99,22 @@
         <div class="puzzle-container">
             <img src="https://puzzle5.github.io/images/puzzle5.png" alt="Puzzle 5">
             <a href="https://puzzle5.github.io/puzzle6.html">Next Puzzle</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="https://github.com/Puzzle5/puzzle5.github.io" target="_blank">GitHub.com</a></li>
+                <li><a href="https://webpages.charlotte.edu/pchapin/" target="_blank">Home Page</a></li>
+                <li><a href="https://puzzle5.github.io/" target="_blank">GitHub.io</a></li>
+                <li><a href="itis3135/" target="_blank">Click to go to ITIS3135 Site</a></li>
+                <li><a href="about:blank" target="_blank">[No LinkedIn]</a></li>
+            </ul>
+        </nav>
+
+        <div class="bottom-links">
+            <a href="https://puzzle5.github.io/index.html">Home</a>
+            <a href="https://puzzle5.github.io/about.html">About</a>
+            <a href="https://puzzle5.github.io/contact.html">Contact</a>
         </div>
     </div>
 </body>
