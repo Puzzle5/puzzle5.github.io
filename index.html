@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proud Cobra - Puzzle 5</title>
+    <title>Proud Cobra || Home</title>
     <style>
         body {
             font-family: sans-serif;
@@ -11,7 +11,7 @@
             background-color: #1e1e1e;
             color: #d4d4d4;
             display: flex;
-            flex-direction: column; /* Stack header, main, footer */
+            flex-direction: column;
             min-height: 100vh;
         }
 
@@ -21,7 +21,7 @@
         }
 
         main {
-            flex-grow: 1; /* Allow main to expand and fill available space */
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,16 +38,19 @@
 
         h1 {
             color: #b5cea8;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .intro-text {
-            font-family: monospace;
-            font-size: 1.2em;
-            line-height: 1.8;
+        h2 {
+            color: #b5cea8;
             text-align: center;
-            white-space: pre-wrap;
             margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         a {
@@ -92,7 +95,7 @@
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #333; /* Darker footer background */
+            background-color: #333;
         }
     </style>
 </head>
@@ -103,39 +106,25 @@
 
     <main>
         <div id="container">
-            <div class="intro-text">
-                I'm Proud Cobra...
+            <h1>I'm Proud Cobra...</h1>
+            <h2>...and this is the root of my website.</h2>
+            <p>Below, you can navigate to my class projects.</p>
 
-                ...and this is the root of my website.
 
-                Below, you can navigate to my class projects.
-            </div>
-
-            <div class="puzzle-container">
-                <img src="https://puzzle5.github.io/images/puzzle5.png" alt="Puzzle 5">
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="https://github.com/Puzzle5/puzzle5.github.io" target="_blank">GitHub.com</a></li>
-                    <li><a href="https://webpages.charlotte.edu/pchapin/" target="_blank">Home Page</a></li>
-                    <li><a href="https://puzzle5.github.io/" target="_blank">GitHub.io</a></li>
-                    <li><a href="itis3135/" target="_blank">Click to go to ITIS3135 Site</a></li>
-                    <li><a href="about:blank" target="_blank">[No LinkedIn]</a></li>
-                </ul>
-            </nav>
         </div>
     </main>
 
     <footer>
         <nav>
             <ul>
-                <li><a href="#">HTML Validation</a></li>
-                <li><a href="#">CSS Validation</a></li>
+                <li><a href="https://github.com/Puzzle5/puzzle5.github.io" target="_blank">GitHub.com</a></li>
+                <li><a href="https://webpages.charlotte.edu/pchapin/" target="_blank">Home Page</a></li>
+                <li><a href="https://puzzle5.github.io/" target="_blank">GitHub.io</a></li>
+                <li><a href="itis3135/" target="_blank">Click to go to ITIS3135 Site</a></li>
+                <li><a href="about:blank" target="_blank">[No LinkedIn]</a></li>
             </ul>
         </nav>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </footer>
-
-    <script src="scripts/your-script.js"></script>
 </body>
 </html>
