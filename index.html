@@ -1,138 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-        <title>Proud Cobra || Home</title>
-        <style>
-        :root {
-    /** Base colors */
-    --clr-dark-a0: #000000:
-    --clr-light-a0: #ffffff;
-    /** Dark theme primary colors */
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 5</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    --clr-primary-a0: #91ad82;
-    --clr-primary-a10: #9db68f;
-    --clr-primary-a20: #a9bf9d;
-    --clr-primary-a30: #b5c8aa;
-    --clr-primary-a40: #c1d1b8;
-    --clr-primary-a50: #cddac6;
+        #container {
+            max-width: 600px;
+            width: 90%;
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
 
-    /** Dark theme surface colors */
+        h1 {
+            color: #b5cea8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    --clr-surface-a0: #121212;
-    --clr-surface-a10: #282828;
-    --clr-surface-a20: #3f3f3f;
-    --clr-surface-a30: #575757;
-    --clr-surface-a40: #717171;
-    --clr-surface-a50: #8b8b8b;
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
 
-    /** Dark theme tonal surface colors */
+        a {
+            color: #4ec9b0;
+            text-decoration: none;
+        }
 
-    --clr-surface-tonal-a0: #1d201c;
-    --clr-surface-tonal-a10: #323531;
-    --clr-surface-tonal-a20: #484b47;
-    --clr-surface-tonal-a30: #60625f;
-    --clr-surface-tonal-a40: #787a77;
-    --clr-surface-tonal-a50: #919391;
+        a:hover {
+            text-decoration: underline;
+        }
 
-}
+        .puzzle-container {
+            margin-top: 20px;
+        }
 
-a {
-	color: #FFFFFF;
-}
+        .puzzle-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-body {
-	color: #ffffff;
-	background-color: #121212;
-	margin: 0;
-}
-header, main, section, footer {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	max-width: 750px;
-	background-color: #282828;
-}
-main, header, nav {
-	align-content: center;
-}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-nav {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	background-color: #282828;
-}
+        .puzzle-container a {
+          display: block;
+          text-align: center;
+          margin-top: 10px;
+        }
 
-/*nav {
-  width: 50%;
-  max-width: 300px;
-  height: 50px;
-}*/
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Puzzle 5</h1>
+        <p>This is a puzzle website. Each puzzle contains a picture, and a link to the next puzzle. Some puzzles may be harder than others. Have fun!</p>
 
-nav > ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-inline-start: 0;
-  margin-block: 0;
-  height: 100%;
-}
-
-nav > ul > li {
-  color: #dfdfe2;
-  margin: 0 0.2rem;
-  padding: 0.2rem;
-  display: block;
-}
-
-nav > ul > li:hover {
-  background-color: #dfdfe2;
-  color: #1b1b32;
-  cursor: pointer;
-}
-
-li > a {
-  color: inherit;
-  text-decoration: none;
-}
-
-        </style>
-    </head>
-    <body>
-        <header id="header">
-            <h1>I'm Proud Cobra...</h1>
-        </header>
-        <main id="main">
-            <h2>...and this is the root of my website.</h2>
-            <p>Below, you can navigate to my class projects.</p>
-        </main>
-        <footer id="footer">
-            <nav>
-                <ul>
-                    <li><a href = "https://github.com/Puzzle5/puzzle5.github.io" target="_blank">GitHub.com</a></li>
-                    <li>||</li>
-                    <li><a href="https://webpages.charlotte.edu/pchapin/" target="_blank">Home Page</a></li>
-                    <li>||</li>
-                    <li><a href = "https://puzzle5.github.io/" target="_blank">GitHub.io</a></li>
-                    <li>||</li>
-                    <li><a href = "itis3135/" target="_blank">Click to go to ITIS3135 Site</a></li>
-                    <li>||</li>
-                    <li><a href="about:blank" target="_blank">[No LinkedIn]</a></li>
-                </ul>
-            </nav>
-            <script>
-                document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-                document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-            </script>
-        </footer>
-    </body>
+        <div class="puzzle-container">
+            <img src="https://puzzle5.github.io/images/puzzle5.png" alt="Puzzle 5">
+            <a href="https://puzzle5.github.io/puzzle6.html">Next Puzzle</a>
+        </div>
+    </div>
+</body>
 </html>
