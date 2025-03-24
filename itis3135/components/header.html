@@ -8,7 +8,41 @@
                     <li>||</li>
                     <li><a href="contract.html">Contract</a></li>
                     <li>||</li>
+                    <li class="projects-menu">
+                        <a href="#">Projects</a>
+                        <span class="down-arrow">&#9660;</span>
+                        <nav class="projects-nav">
+                            <ul>
+                                <li><a href="hobby/index.html" target="_blank">Hobby</a></li>
+                                <li>||</li>
+                                <li><a href="/proud-cobra.com/index.html" target="_blank">Design Firm</a></li>
+                                <li>||</li>
+                                <li><a href="../whimsical/about.html">Proud Cobra Mining</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>||</li>
                     <li><a href="website-evalutations.html">Evaluations</a></li>
                 </ul>
             </nav>
         </header>
+        <script>
+            const projectsMenu = document.querySelector('.projects-menu');
+            const projectsNav = document.querySelector('.projects-nav');
+
+            projectsMenu.addEventListener('mouseenter', () => {
+                projectsNav.style.display = 'flex';
+            });
+
+            projectsMenu.addEventListener('mouseleave', () => {
+                projectsNav.style.display = 'none';
+            });
+
+            projectsNav.addEventListener('mouseenter', () => {
+                projectsNav.style.display = 'flex';
+            });
+
+            projectsNav.addEventListener('mouseleave', () => {
+                projectsNav.style.display = 'none';
+            });
+        </script>
