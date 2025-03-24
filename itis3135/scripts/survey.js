@@ -14,14 +14,14 @@ document.getElementById('introForm').addEventListener('submit', function(event) 
     resultDiv.innerHTML += `
     <p><strong>Name:</strong> ${formData.get('name')}</p>
     <p><strong>Mascot:</strong> ${formData.get('mascot')}</p>
-    <p><strong>Image:</strong> <img src="${URL.createObjectURL(formData.get('image'))}" alt="${formData.get('imageCaption')}" style="max-width: 300px;"></p>
+    <p><strong>Image:</strong> <img src="${URL.createObjectURL(formData.get('image'))}" alt="${formData.get('imageCaption')}"></p>
     <p><strong>Image Caption:</strong> ${formData.get('imageCaption')}</p>
     <p><strong>Personal Background:</strong> ${formData.get('personalBackground')}</p>
     <p><strong>Professional Background:</strong> ${formData.get('professionalBackground')}</p>
     <p><strong>Academic Background:</strong> ${formData.get('academicBackground')}</p>
     <p><strong>Web Development Background:</strong> ${formData.get('webDevBackground')}</p>
     <p><strong>Computer Platform:</strong> ${formData.get('computerPlatform')}</p>
-    <p><strong>Courses:</strong> ${Array.from(formData.getAll('course[]')).filter(course => course).join(', ')}</p>
+    <p><strong>Courses:</strong> <ul>${Array.from(formData.getAll('course[]')).filter(course => course).map(course => `<li>${course}</li>`).join('')}</ul></p>
     <p><strong>Funny Thing:</strong> ${formData.get('funnyThing')}</p>
     <p><strong>Anything Else:</strong> ${formData.get('anythingElse')}</p>
     `;
