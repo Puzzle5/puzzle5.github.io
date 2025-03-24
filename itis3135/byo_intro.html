@@ -1,74 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-        <title>
-            Proud Cobra || ITIS-3135 || Homepage
-        </title>
-        <link rel="stylesheet" href="styles/default.css">
-    </head>
-    <body>
-        <div data-include="components/header.html"></div>
-        <main>
-            <h2>BYO Intro Page</h2>
-            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
-            <form id="introForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" value="Your Name" required><br><br>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Proud Cobra || ITIS-3135 || Homepage</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/survey.js" defer></script>
+    <style>
+        form table {
+            width: 100%;
+        }
+        form td:first-child {
+            width: 30%;
+            padding-right: 10px;
+            vertical-align: top;
+        }
+        form td:last-child {
+            width: 70%;
+        }
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        form textarea {
+            resize: vertical;
+        }
+        #courses {
+            display: flex;
+            flex-direction: column;
+        }
+        #courses input {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>BYO Intro Page</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <form id="introForm">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" value="Your Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mascot">Mascot:</label></td>
+                    <td><input type="text" id="mascot" name="mascot" value="Your Mascot" required></td>
+                </tr>
+                <tr>
+                    <td><label for="image">Image (PNG or JPG):</label></td>
+                    <td><input type="file" id="image" name="image" accept="image/png, image/jpeg" required></td>
+                </tr>
+                <tr>
+                    <td><label for="imageCaption">Image Caption:</label></td>
+                    <td><input type="text" id="imageCaption" name="imageCaption" value="Your Image Caption" required></td>
+                </tr>
+                <tr>
+                    <td><label for="personalBackground">Personal Background:</label></td>
+                    <td><textarea id="personalBackground" name="personalBackground" required>Your Personal Background</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="professionalBackground">Professional Background:</label></td>
+                    <td><textarea id="professionalBackground" name="professionalBackground" required>Your Professional Background</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="academicBackground">Academic Background:</label></td>
+                    <td><textarea id="academicBackground" name="academicBackground" required>Your Academic Background</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="webDevBackground">Background in Web Development:</label></td>
+                    <td><textarea id="webDevBackground" name="webDevBackground" required>Your Web Development Background</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="computerPlatform">Primary Computer Platform:</label></td>
+                    <td><input type="text" id="computerPlatform" name="computerPlatform" value="Your Computer Platform" required></td>
+                </tr>
+                <tr>
+                    <td><label>Courses currently taking:</label></td>
+                    <td>
+                        <div id="courses">
+                            <input type="text" name="course[]">
+                            <button type="button" onclick="addCourse()">Add Course</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="funnyThing">Funny Thing?</label></td>
+                    <td><textarea id="funnyThing" name="funnyThing">Your Funny Thing</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="anythingElse">Anything else?</label></td>
+                    <td><textarea id="anythingElse" name="anythingElse">Anything else</textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="agreement" required>
+                            I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
 
-                <label for="mascot">Mascot:</label>
-                <input type="text" id="mascot" name="mascot" value="Your Mascot" required><br><br>
-
-                <label for="image">Image (PNG or JPG):</label>
-                <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br><br>
-
-                <label for="imageCaption">Image Caption:</label>
-                <input type="text" id="imageCaption" name="imageCaption" value="Your Image Caption" required><br><br>
-
-                <label for="personalBackground">Personal Background:</label>
-                <textarea id="personalBackground" name="personalBackground" required>Your Personal Background</textarea><br><br>
-
-                <label for="professionalBackground">Professional Background:</label>
-                <textarea id="professionalBackground" name="professionalBackground" required>Your Professional Background</textarea><br><br>
-
-                <label for="academicBackground">Academic Background:</label>
-                <textarea id="academicBackground" name="academicBackground" required>Your Academic Background</textarea><br><br>
-
-                <label for="webDevBackground">Background in Web Development:</label>
-                <textarea id="webDevBackground" name="webDevBackground" required>Your Web Development Background</textarea><br><br>
-
-                <label for="computerPlatform">Primary Computer Platform:</label>
-                <input type="text" id="computerPlatform" name="computerPlatform" value="Your Computer Platform" required><br><br>
-
-                <label>Courses currently taking:</label>
-                <div id="courses">
-                    <input type="text" name="course[]"><button type="button" onclick="addCourse()">Add Course</button>
-                </div><br><br>
-
-                <label for="funnyThing">Funny Thing?</label>
-                <textarea id="funnyThing" name="funnyThing">Your Funny Thing</textarea><br><br>
-
-                <label for="anythingElse">Anything else?</label>
-                <textarea id="anythingElse" name="anythingElse">Anything else</textarea><br><br>
-
-                <label>
-                    <input type="checkbox" name="agreement" required>
-                    I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
-                </label><br><br>
-
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </form>
-
-            <div id="introResult" style="display: none;">
-                <h2>Your Introduction</h2>
-                <div id="resultContent"></div>
-                <button onclick="resetPage()">Reset</button>
-            </div>
-        </main>
-        <div data-include="components/footer.html"></div>
-        <script src="scripts/include.min.js"></script>
-    </body>
+        <div id="introResult" style="display: none;">
+            <h2>Your Introduction</h2>
+            <div id="resultContent"></div>
+            <button onclick="resetPage()">Reset</button>
+        </div>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.min.js"></script>
+</body>
 </html>
