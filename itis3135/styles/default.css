@@ -213,3 +213,32 @@ header, footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.projects-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #282828;
+    padding: 10px 20px;
+    border: 1px solid #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+    flex-direction: column; /* For vertical layout of the links */
+    min-width: 200px;
+}
+
+.projects-menu {
+    position: relative; /* Make sure the dropdown is positioned relative to this */
+}
+
+.projects-nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.projects-nav ul li{
+    margin: 0 10px;
+}
