@@ -246,7 +246,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 300px;
     margin-top: 0;
 }
 
