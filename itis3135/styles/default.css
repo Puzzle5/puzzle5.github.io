@@ -271,5 +271,10 @@ footer {
 }
 
 .projects-nav ul li {
-    margin: 0 10px;
+    margin: 0 0;
+}
+
+.projects-nav ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
 }
