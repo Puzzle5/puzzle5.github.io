@@ -4,11 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proud Cobra Enterprises</title>
-    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* styles.css */
+        /* Coolors Palette: https://coolors.co/palette/283618-fbf1c7-f2e5bc-d8a97f-855723 */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbf1c7;
+            color: #283618;
+        }
+
+        header {
+            background-color: #d8a97f;
+            color: #283618;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            margin-right: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f2e5bc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex; /* Added for card layout */
+            flex-wrap: wrap;  /* Added for card layout */
+            justify-content: space-around; /* Added for card layout */
+        }
+
+        h2 {
+            color: #855723;
+            margin-bottom: 20px;
+            width: 100%; /* Ensure h2 spans the full width */
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            width: 100%; /* Ensure ul spans the full width if needed */
+
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background-color: #d8a97f;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            width: 100%; /* span the whole width */
+        }
+
+        footer {
+            background-color: #283618;
+            color: #fbf1c7;
+            text-align: center;
+            padding: 10px;
+            position: relative; /* Changed from fixed to relative */
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Styles for the cards */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 10px;
+            width: calc(30% - 40px); /* Adjust width to account for margin and padding */
+            box-sizing: border-box; /* Include padding and border in width */
+            text-align: center;
+            min-width: 200px; /* Add a minimum width if needed */
+        }
+        .card img{
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <img src="images/cobra-logo.png" alt="Proud Cobra Enterprises Logo" width="50" height="50"> <h1>Proud Cobra Enterprises</h1>
+        <img src="images/cobra-logo.png" alt="Proud Cobra Enterprises Logo" width="50" height="50">
+        <h1>Proud Cobra Enterprises</h1>
     </header>
     <main>
         <h2>Proud Cobra Enterprises Services</h2>
@@ -25,6 +124,22 @@
             <li>Website Security Audits</li>
             <li>Performance Optimization</li>
         </ul>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <h3>Card 1</h3>
+            <p>Card 1 Description.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <h3>Card 2</h3>
+            <p>Card 2 Description.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <h3>Card 3</h3>
+            <p>Card 3 Description.</p>
+        </div>
+
         <p>We are committed to understanding your unique needs and delivering tailored solutions that exceed your expectations. Let us help you build a strong online presence and achieve your business goals.</p>
         <div class="contact-info">
             <p><strong>Contact Information:</strong></p>
