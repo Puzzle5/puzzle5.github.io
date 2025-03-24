@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>HTML Tables || ITIS-3135 || Homepage</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/include.min.js"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>HTML Tables</h2>
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>
+                <strong>Name:</strong> D.I. von Briesen<br>
+                <strong>Email:</strong> dvonbri1@uncc.edu<br>
+                <strong>Years of Service:</strong> 1
+            </li>
+            <li>
+                <strong>Name:</strong> Esam Abdullah<br>
+                <strong>Email:</strong> eabdullah@gmail.com<br>
+                <strong>Years of Service:</strong> 31
+            </li>
+            <li>
+                <strong>Name:</strong> Medina Gomez<br>
+                <strong>Email:</strong> gomez_med8@yahoo.com<br>
+                <strong>Years of Service:</strong> 3
+            </li>
+             <li>
+                <strong>Name:</strong> John Smith<br>
+                <strong>Email:</strong> johnsmith@company.com<br>
+                <strong>Years of Service:</strong> 10
+            </li>
+            <li>
+                <strong>Name:</strong> Jane Doe<br>
+                <strong>Email:</strong> janedoe@company.com<br>
+                <strong>Years of Service:</strong> 5
+            </li>
+            <li>
+                <strong>Name:</strong> Peter Jones<br>
+                <strong>Email:</strong> peterjones@company.com<br>
+                <strong>Years of Service:</strong> 20
+            </li>
+            <li>
+                <strong>Name:</strong> Mary Brown<br>
+                <strong>Email:</strong> marybrown@company.com<br>
+                <strong>Years of Service:</strong> 2
+            </li>
+            <li>
+                <strong>Name:</strong> David Wilson<br>
+                <strong>Email:</strong> davidwilson@company.com<br>
+                <strong>Years of Service:</strong> 15
+            </li>
+        </ol>
+
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr>
+                <td>D.I. von Briesen</td>
+                <td>dvonbri1@uncc.edu</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Esam Abdullah</td>
+                <td>eabdullah@gmail.com</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>Medina Gomez</td>
+                <td>gomez_med8@yahoo.com</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>John Smith</td>
+                <td>johnsmith@company.com</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>janedoe@company.com</td>
+                <td>5</td>
+            </tr>
+             <tr>
+                <td>Peter Jones</td>
+                <td>peterjones@company.com</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Mary Brown</td>
+                <td>marybrown@company.com</td>
+                <td>2</td>
+            </tr>
+             <tr>
+                <td>David Wilson</td>
+                <td>davidwilson@company.com</td>
+                <td>15</td>
+            </tr>
+        </table>
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <table>
+                <caption>Employee Information</caption>
+                <tr>
+                    <th rowspan="2">Category</th>
+                    <th rowspan="2">Name</th>
+                    <th rowspan="2">Email</th>
+                    <th rowspan="2">Years of Service</th>
+                    <th rowspan="2">Monthly Salary</th>
+                </tr>
+                <tr>
+
+                </tr>
+                <tr>
+                    <td rowspan="3">Management</td>
+                    <td>D.I. von Briesen</td>
+                    <td>dvonbri1@uncc.edu</td>
+                    <td>1</td>
+                    <td>$83,333.34</td>
+                </tr>
+                <tr>
+                    <td>John Smith</td>
+                    <td>johnsmith@company.com</td>
+                    <td>10</td>
+                    <td>$6,000</td>
+                </tr>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>janedoe@company.com</td>
+                    <td>5</td>
+                    <td>$5,000</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Sales</td>
+                    <td>Esam Abdullah</td>
+                    <td>eabdullah@gmail.com</td>
+                    <td>31</td>
+                    <td>$2,083.33</td>
+                </tr>
+                <tr>
+                    <td>Medina Gomez</td>
+                    <td>gomez_med8@yahoo.com</td>
+                    <td>3</td>
+                    <td>$4,583.33</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Peter Jones</td>
+                    <td>peterjones@company.com</td>
+                    <td>20</td>
+                    <td>$3,000</td>
+                </tr>
+                <tr>
+                    <td>Marketing</td>
+                    <td>Mary Brown</td>
+                    <td>marybrown@company.com</td>
+                    <td>2</td>
+                    <td>$2,500</td>
+                </tr>
+                <tr>
+                    <td>HR</td>
+                    <td>David Wilson</td>
+                    <td>davidwilson@company.com</td>
+                    <td>15</td>
+                    <td>$4,000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total Years of Service</th>
+                    <td>87</td>
+                    <td>$110,000</td>
+                </tr>
+            </table>
+            <figcaption>Table of employee data, including category, name, email, years of service, and monthly salary.</figcaption>
+        </figure>
+    </main>
+    <div data-include="components/footer.html"></div>
+</body>
+</html>

@@ -325,3 +325,44 @@ form td > input[type="text"],
         padding: 8px;
         box-sizing: border-box;
         }
+
+        /* CSS for the tables page */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #282828;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #4a5568;
+    /* Darker alternating rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #373e4a;
+    /* Lighter alternating rows */
+}
+
+tr:hover {
+    background-color: #616e80;
+}
+
+/* Style for the caption */
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #999;
+    text-align: center;
+}
