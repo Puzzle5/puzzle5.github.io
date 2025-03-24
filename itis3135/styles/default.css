@@ -300,27 +300,28 @@ form td:last-child {
     width: 70%;
 }
 
+/* Target input and textarea within form and table cells */
 form td > input[type="text"],
-form td > textarea,
-form td > input[type="file"] {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
+    form td > textarea,
+        form td > input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
 
-form textarea {
-    resize: vertical;
-}
+        form textarea {
+            resize: vertical;
+        }
 
-#courses {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+        #courses {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        }
 
-#courses input {
-    margin-bottom: 5px;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
+        #courses input {
+        margin-bottom: 5px;
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        }
