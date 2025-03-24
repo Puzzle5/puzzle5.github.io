@@ -300,9 +300,9 @@ form td:last-child {
     width: 70%;
 }
 
-form input[type="text"],
-form textarea,
-form input[type="file"] { /* Include file inputs */
+form td > input[type="text"],
+form td > textarea,
+form td > input[type="file"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
