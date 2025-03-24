@@ -245,8 +245,7 @@ footer {
     border: 1px solid #555;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    flex-direction: column;
-    min-width: 300px;
+    white-space: nowrap;
     margin-top: 0;
 }
 
