@@ -272,3 +272,13 @@ footer {
 .projects-nav ul li {
     margin: 0 10px;
 }
+#introResult strong {
+font-weight: bold;
+}
+#introResult ul {
+list-style-type: disc;
+margin-left: 20px;
+}
+#introResult img {
+max-width: 300px;
+}
