@@ -236,7 +236,7 @@ footer {
 }
 
 .projects-nav {
-    display: none; /* Hide by default */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -272,13 +272,55 @@ footer {
 .projects-nav ul li {
     margin: 0 10px;
 }
+
 #introResult strong {
 font-weight: bold;
 }
+
 #introResult ul {
 list-style-type: disc;
 margin-left: 20px;
 }
+
 #introResult img {
 max-width: 300px;
+}
+
+form table {
+    width: 100%;
+}
+
+form td:first-child {
+    width: 30%;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+form td:last-child {
+    width: 70%;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] { /* Include file inputs */
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+#courses {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#courses input {
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
 }
