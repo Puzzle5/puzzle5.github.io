@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <title>
+            Proud Cobra || ITIS-3135 || Homepage
+        </title>
+        <link rel="stylesheet" href="styles/default.css">
+    </head>
+    <body>
+        <div data-include="components/header.html"></div>
+        <main>
+            <h2>BYO Intro Page</h2>
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+            <form id="introForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="Your Name" required><br><br>
+
+                <label for="mascot">Mascot:</label>
+                <input type="text" id="mascot" name="mascot" value="Your Mascot" required><br><br>
+
+                <label for="image">Image (PNG or JPG):</label>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br><br>
+
+                <label for="imageCaption">Image Caption:</label>
+                <input type="text" id="imageCaption" name="imageCaption" value="Your Image Caption" required><br><br>
+
+                <label for="personalBackground">Personal Background:</label>
+                <textarea id="personalBackground" name="personalBackground" required>Your Personal Background</textarea><br><br>
+
+                <label for="professionalBackground">Professional Background:</label>
+                <textarea id="professionalBackground" name="professionalBackground" required>Your Professional Background</textarea><br><br>
+
+                <label for="academicBackground">Academic Background:</label>
+                <textarea id="academicBackground" name="academicBackground" required>Your Academic Background</textarea><br><br>
+
+                <label for="webDevBackground">Background in Web Development:</label>
+                <textarea id="webDevBackground" name="webDevBackground" required>Your Web Development Background</textarea><br><br>
+
+                <label for="computerPlatform">Primary Computer Platform:</label>
+                <input type="text" id="computerPlatform" name="computerPlatform" value="Your Computer Platform" required><br><br>
+
+                <label>Courses currently taking:</label>
+                <div id="courses">
+                    <input type="text" name="course[]"><button type="button" onclick="addCourse()">Add Course</button>
+                </div><br><br>
+
+                <label for="funnyThing">Funny Thing?</label>
+                <textarea id="funnyThing" name="funnyThing">Your Funny Thing</textarea><br><br>
+
+                <label for="anythingElse">Anything else?</label>
+                <textarea id="anythingElse" name="anythingElse">Anything else</textarea><br><br>
+
+                <label>
+                    <input type="checkbox" name="agreement" required>
+                    I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                </label><br><br>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+
+            <div id="introResult" style="display: none;">
+                <h2>Your Introduction</h2>
+                <div id="resultContent"></div>
+                <button onclick="resetPage()">Reset</button>
+            </div>
+        </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/include.min.js"></script>
+    </body>
+</html>
