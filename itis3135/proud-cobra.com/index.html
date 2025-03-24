@@ -55,7 +55,7 @@
             list-style-type: square;
             padding-left: 20px;
             width: 100%; /* Ensure ul spans the full width if needed */
-
+            box-sizing: border-box; /* Include padding in width */
         }
 
         ul li {
@@ -67,7 +67,8 @@
             padding: 15px;
             border-radius: 5px;
             margin-top: 20px;
-            width: 100%; /* span the whole width */
+            width: calc(100% - 30px);  /* Adjusted width to account for padding */
+            box-sizing: border-box; /* Include padding in width */
         }
 
         footer {
@@ -125,19 +126,19 @@
             <li>Performance Optimization</li>
         </ul>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-            <h3>Card 1</h3>
-            <p>Card 1 Description.</p>
+            <img src="images/call.jpg" alt="Call Us">
+            <h3>Call Us</h3>
+            <p>Initiate your project with a call to discuss your needs.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-            <h3>Card 2</h3>
-            <p>Card 2 Description.</p>
+            <img src="images/consult.jpg" alt="Consult with Us">
+            <h3>Consult with Us</h3>
+            <p>Meet our experts for in-depth analysis and planning.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-            <h3>Card 3</h3>
-            <p>Card 3 Description.</p>
+            <img src="images/commit.jpg" alt="Commit to a Plan">
+            <h3>Commit to a Plan</h3>
+            <p>Finalize your project scope and get started.</p>
         </div>
 
         <p>We are committed to understanding your unique needs and delivering tailored solutions that exceed your expectations. Let us help you build a strong online presence and achieve your business goals.</p>
