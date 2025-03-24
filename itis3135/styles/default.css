@@ -14,7 +14,7 @@ button,
 input,
 textarea,
 select {
-    box-sizing: inherit;
+    box-sizing: inherit; /* Apply box-sizing from html */
 }
 
 body {
