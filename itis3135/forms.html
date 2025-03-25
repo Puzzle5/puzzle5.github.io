@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms || ITIS-3135 || Homepage</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/include.min.js"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>HTML Forms</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required size="30" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required size="20" placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required size="30" placeholder="Enter your email address">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Product Interest</legend>
+                <p>Select the products you are interested in:</p>
+                <div>
+                    <input type="checkbox" id="product1" name="product" value="Product 1">
+                    <label for="product1">Product 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="product2" name="product" value="Product 2">
+                    <label for="product2">Product 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="product3" name="product" value="Product 3">
+                    <label for="product3">Product 3</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+                <p>Choose your preferred contact method:</p>
+                <div>
+                    <input type="radio" id="contactEmail" name="contact" value="email" required>
+                    <label for="contactEmail">Email</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactPhone" name="contact" value="phone" required>
+                    <label for="contactPhone">Phone</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactMail" name="contact" value="mail" required>
+                    <label for="contactMail">Mail</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select a Service</legend>
+                <label for="service">Choose a service:</label>
+                <select id="service" name="service">
+                    <option value="service1">Service 1</option>
+                    <option value="service2">Service 2</option>
+                    <option value="service3">Service 3</option>
+                    <option value="service4">Service 4</option>
+                </select>
+            </fieldset>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <div data-include="components/footer.html"></div>
+</body>
+</html>
