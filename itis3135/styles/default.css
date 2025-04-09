@@ -397,11 +397,13 @@ figcaption {
     padding: 10px 12px;
     position: absolute;
     bottom: 0;
+    left: 0; /* Ensure the caption starts from the left */
     width: 100%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .slide-list {
@@ -441,7 +443,7 @@ figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 20px; /* Add space between image and controls */
     gap: 15px;
 }
 
@@ -499,6 +501,5 @@ figcaption {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 20px; /* Add space between image and controls container */
 }
-
