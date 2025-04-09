@@ -397,7 +397,7 @@ figcaption {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: fit-content; /* Changed from 100% to fit-content */
     position: absolute;
     bottom: 0;
     left: 0;
