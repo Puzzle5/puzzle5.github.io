@@ -292,7 +292,7 @@ form table {
 
 form td:first-child {
     width: 30%;
-    /*     padding-right: 10px; */
+    /* padding-right: 10px; */
     vertical-align: top;
 }
 
@@ -366,6 +366,7 @@ figcaption {
     color: #999;
     text-align: center;
 }
+
 /* Slideshow-specific CSS */
 .slideshow-container {
     position: relative;
@@ -377,16 +378,19 @@ figcaption {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 800px;
 }
+
 .mySlides {
     display: none;
     width: 100%;
     height: auto;
 }
+
 .mySlides img {
     width: 100%;
     height: auto;
     vertical-align: middle;
 }
+
 .caption {
     color: #222;
     font-size: 16px;
@@ -401,6 +405,7 @@ figcaption {
     border-top-right-radius: 8px;
     box-sizing: border-box;
 }
+
 .slide-list {
     list-style: none;
     padding: 0;
@@ -411,6 +416,7 @@ figcaption {
     gap: 10px;
     width: 60%;
 }
+
 .slide-list li {
     cursor: pointer;
     padding: 8px 12px;
@@ -422,13 +428,16 @@ figcaption {
     white-space: nowrap;
     color: #444;
 }
+
 .slide-list li:hover {
     background-color: #ddd;
 }
+
 .active {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
 }
+
 .controls {
     display: flex;
     justify-content: center;
@@ -436,6 +445,7 @@ figcaption {
     margin-top: 0;
     gap: 15px;
 }
+
 .controls button {
     padding: 6px;
     border: none;
@@ -451,12 +461,15 @@ figcaption {
     align-items: center;
     justify-content: center;
 }
+
 .controls button:hover {
     background-color: #ddd;
 }
+
 .controls button i {
     margin: 0;
 }
+
 .thumbs-like {
     padding: 10px;
     border: none;
@@ -468,9 +481,11 @@ figcaption {
     margin-left: 20px;
     color: #333;
 }
+
 .thumbs-like:hover {
     background-color: #ddd;
 }
+
 .full-screen {
     padding: 10px;
     border: none;
@@ -481,15 +496,18 @@ figcaption {
     transition: background-color 0.3s ease;
     color: #333;
 }
+
 .full-screen:hover {
     background-color: #ddd;
 }
+
 .controls-container {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 20px;
 }
+
 .timer-bar {
     position: absolute;
     bottom: 0;
@@ -501,15 +519,17 @@ figcaption {
     animation-play-state: paused;
     overflow: hidden;
 }
+
 .timer-bar.animate {
     animation-play-state: running;
 }
+
 @keyframes timer-animation {
     from {
         width: 100%;
     }
+
     to {
         width: 0%;
     }
 }
-
