@@ -49,7 +49,7 @@ function currentSlide(n) {
 function autoPlay() {
 	timeoutId = setTimeout(() => {
 		plusSlides(1);
-	}, 3000);
+	}, 5000); // Changed from 3000 to 5000
 }
 
 function startSlideShow() {
