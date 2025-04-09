@@ -38,12 +38,16 @@ function showSlides(n) {
 	//restartTimerBar();
 }
 
-function autoPlay() {
-	timerBar = slides[slideIndex].querySelector(".timer-bar");
-	timerBar.classList.add("animate");
+function resetTimer() {
 	timeoutId = setTimeout(() => {
 		plusSlides(1);
 	}, 5000);
+}
+
+function autoPlay() {
+	timerBar = slides[slideIndex].querySelector(".timer-bar");
+	timerBar.classList.add("animate");
+	resetTimer();
 }
 
 function plusSlides(n) { // Function moved to be defined before autoPlay() and any other function that calls it.
