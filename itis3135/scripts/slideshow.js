@@ -113,6 +113,17 @@ function plusSlides(n) { // Function moved to be defined before autoPlay() and a
 }
 
 
+
+function currentSlide(n) { // Function moved to be defined before being called.
+	clearTimeout(timeoutId);
+	slideIndex = n;
+	showSlides(slideIndex);
+	if (isPlaying) {
+		autoPlay();
+	}
+}
+
+
 document.addEventListener("keydown", (event) => {
 	if (event.key === "ArrowLeft") {
 		plusSlides(-1);
@@ -143,14 +154,6 @@ slideListItems.forEach((item, index) => {
 	});
 });
 
-function currentSlide(n) { // Function moved to be defined before being called.
-	clearTimeout(timeoutId);
-	slideIndex = n;
-	showSlides(slideIndex);
-	if (isPlaying) {
-		autoPlay();
-	}
-}
 
 
 startButton.addEventListener("click", startSlideShow);
