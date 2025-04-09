@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Proud Cobra || ITIS-3135 || Slideshow</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* Overall container for the slideshow */
+        #slideshow-container {
+            position: relative; /* Allows for absolute positioning of elements within */
+            width: 500px;      /* Fixed width, adjust as needed */
+            margin: 20px auto; /* Center the slideshow on the page */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual separation */
+            /*overflow: hidden; Important, clips progress bar and any overflowing elements*/
+        }
+
+        /* Style for the image display */
+        #slideshow-image {
+            width: 100%; /* Image takes the full width of the container */
+            display: block; /* Removes extra space below the image */
+            height: auto;  /*Maintain aspect ratio*/
+        }
+
+        /* Style for the caption text */
+        #caption {
+            position: absolute; /* Positioned relative to the container */
+            top: 0;           /* At the top of the container */
+            left: 0;          /* At the left edge */
+            width: 100%;      /* Full width of the container */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: white;         /* White text */
+            padding: 10px;      /* Add some padding around the text */
+            text-align: center;    /* Center the text */
+            font-size: 1em;       /* Adjust font size as needed */
+            box-sizing: border-box; /*Include padding in width*/
+        }
+
+        /* Style for the controls container */
+        #controls {
+            position: absolute; /* Positioned relative to the container */
+            bottom: 30px;        /* Space between controls and bottom of container*/
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Style for the control buttons */
+        #controls button {
+            background: none; /* No background color */
+            border: none;   /* No border */
+            color: white;     /* White icon color */
+            font-size: 1.2em;  /* Adjust icon size as needed */
+            margin: 0 10px;  /* Space between buttons */
+            cursor: pointer;  /* Show a pointer cursor on hover */
+            padding: 5px;
+        }
+
+        /* Style for the progress bar container */
+        #progress-bar-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(128, 128, 128, 0.7);
+            overflow: hidden;  /* Ensure the progress bar doesn't overflow */
+        }
+
+        /* Style for the progress bar itself */
+        #progress-bar {
+            height: 100%;
+            width: 0%; /* Start with 0% width */
+            background-color: white;
+            transition: none; /* Removed default transition */
+        }
+        .fullscreen-mode #slideshow-container {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen-mode #slideshow-image {
+            max-width: 100%;
+            max-height: 80%; /* leave space for controls and caption*/
+        }
+
+        .fullscreen-mode #caption {
+            font-size: 1.5em;
+        }
+
+        .fullscreen-mode #controls button {
+            font-size: 1.5em;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Slideshow</h2>
+        <div id="slideshow-container" tabindex="0">
+            <div id="caption"></div>
+            <img id="slideshow-image" src="https://placehold.co/500x300/EEE/31343C?text=Placeholder" alt="Slideshow Image">
+            <div id="controls">
+                <button id="beginning-btn" aria-label="Beginning"><i class="fa-solid fa-backward-fast"></i></button>
+                <button id="back-btn" aria-label="Previous"><i class="fa-solid fa-backward"></i></button>
+                <button id="play-pause-btn" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+                <button id="stop-btn" aria-label="Stop"><i class="fa-solid fa-stop"></i></button>
+                <button id="forward-btn" aria-label="Next"><i class="fa-solid fa-forward"></i></button>
+                <button id="end-btn" aria-label="End"><i class="fa-solid fa-forward-fast"></i></button>
+                <button id="fullscreen-btn" aria-label="Fullscreen"><i class="fa-solid fa-expand"></i></button>
+            </div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.min.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const images = [
+                "https://puzzle5.github.io/itis3135/images/slideshow/pencil.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/router.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/outlet.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/usb.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/door.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/coin.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/oil.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/book.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/rhyme.jpg",
+                "https://puzzle5.github.io/itis3135/images/slideshow/antennae.jpg"
+            ];
+            const captions = ["Pencil", "Router", "Outlet", "USB", "Door", "Coin", "Oil", "Book", "Rhyme", "Antennae"];
+            let currentIndex = 0;
+            let intervalId;
+            let isPlaying = true;
+            const slideDuration = 3000;
+
+            const slideshowImage = document.getElementById("slideshow-image");
+            const captionElement = document.getElementById("caption");
+            const progressBar = document.getElementById("progress-bar");
+            const playPauseBtn = document.getElementById("play-pause-btn");
+            const stopBtn = document.getElementById("stop-btn");
+            const beginningBtn = document.getElementById("beginning-btn");
+            const backBtn = document.getElementById("back-btn");
+            const forwardBtn = document.getElementById("forward-btn");
+            const endBtn = document.getElementById("end-btn");
+            const fullscreenBtn = document.getElementById("fullscreen-btn");
+            const slideshowContainer = document.getElementById("slideshow-container");
+
+
+            function loadImage(index) {
+                slideshowImage.src = images[index];
+                captionElement.textContent = captions[index];
+                progressBar.style.width = "0%"; // Reset progress bar to 0%
+                progressBar.style.transition = 'none'; // Remove any existing transition
+                setTimeout(() => {
+                    progressBar.style.transition = `width ${slideDuration}ms linear`; // Add the transition
+                    progressBar.style.width = "100%"; // Start the animation
+                }, 0);
+            }
+
+            function playSlideshow() {
+                if (!isPlaying) return;
+                clearInterval(intervalId); // Clear any existing interval
+                intervalId = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    loadImage(currentIndex);
+                }, slideDuration);
+                playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                isPlaying = true;
+            }
+
+            function pauseSlideshow() {
+                clearInterval(intervalId);
+                isPlaying = false;
+                playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                progressBar.style.transition = 'none';
+            }
+
+            function stopSlideshow() {
+                pauseSlideshow();
+                currentIndex = 0;
+                loadImage(currentIndex);
+            }
+
+            function beginningSlideshow() {
+                pauseSlideshow();
+                currentIndex = 0;
+                loadImage(currentIndex);
+                playSlideshow();
+            }
+
+            function endSlideshow() {
+                pauseSlideshow();
+                currentIndex = images.length - 1;
+                loadImage(currentIndex);
+                playSlideshow();
+            }
+
+
+            function forwardSlide() {
+                pauseSlideshow();
+                currentIndex = (currentIndex + 1) % images.length;
+                loadImage(currentIndex);
+                playSlideshow();
+            }
+
+            function backSlide() {
+                pauseSlideshow();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                loadImage(currentIndex);
+                playSlideshow();
+            }
+
+            function toggleFullscreen() {
+              if (!document.fullscreenElement) {
+                slideshowContainer.requestFullscreen().then(() => {
+                  document.body.classList.add('fullscreen-mode');
+                  playSlideshow();
+                }).catch(err => {
+                  console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+              } else {
+                document.exitFullscreen().then(() => {
+                  document.body.classList.remove('fullscreen-mode');
+                  playSlideshow();
+                });
+              }
+            }
+
+
+
+            playPauseBtn.addEventListener("click", () => {
+                if (isPlaying) {
+                    pauseSlideshow();
+                } else {
+                    playSlideshow();
+                }
+            });
+            stopBtn.addEventListener("click", stopSlideshow);
+            beginningBtn.addEventListener("click", beginningSlideshow);
+            backBtn.addEventListener("click", backSlide);
+            forwardBtn.addEventListener("click", forwardSlide);
+            endBtn.addEventListener("click", endSlideshow);
+            fullscreenBtn.addEventListener("click", toggleFullscreen);
+
+            document.addEventListener('keydown', (event) => {
+                switch (event.key) {
+                    case 'ArrowLeft':
+                        backSlide();
+                        break;
+                    case 'ArrowRight':
+                        forwardSlide();
+                        break;
+                    case ' ':
+                        if (isPlaying) {
+                            pauseSlideshow();
+                        } else {
+                            playSlideshow();
+                        }
+                        break;
+                    case 'Escape':
+                        if (document.fullscreenElement) {
+                            document.exitFullscreen();
+                        }
+                        break;
+                }
+            });
+            loadImage(currentIndex);
+            playSlideshow();
+        });
+    </script>
+</body>
+</html>
