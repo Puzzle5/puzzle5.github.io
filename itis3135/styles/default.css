@@ -387,12 +387,17 @@ figcaption {
     font-size: 16px;
     transition: background-color 0.3s ease;
     color: #333;
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    display: flex; /* Use flexbox for centering */
+    align-items: center;
+    justify-content: center;
 }
 .controls button:hover {
     background-color: #ddd;
 }
 .controls button i {
-    margin: 0 5px;
+    margin: 0; /* Remove default margin */
 }
 .thumbs-like {
     padding: 10px;
