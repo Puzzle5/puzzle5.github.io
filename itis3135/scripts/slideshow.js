@@ -1,97 +1,143 @@
-// JavaScript for the Slideshow
 let slideIndex = 0;
-let slides = $(".mySlides");
-let listItems = $(".slide-list li");
-let intervalId; // To store the interval ID for auto-play
+let timeoutId;
+let isPlaying = false;
 
-function showSlide(n) {
-	slides.hide();
-	listItems.removeClass("active");
-	if (n < 0) {
-		slideIndex = slides.length - 1;
-	} else if (n >= slides.length) {
+const slides = document.querySelectorAll(".mySlides");
+const slideListItems = document.querySelectorAll(".slide-list li");
+const startButton = document.getElementById("start");
+const stopButton = document.getElementById("stop");
+const forwardButton = document.getElementById("forward");
+const backButton = document.getElementById("backwards");
+const beginningButton = document.getElementById("beginning");
+const endButton = document.getElementById("end");
+const fullscreenButton = document.getElementById("fullscreen");
+const slideshowContainer = document.querySelector(".slideshow-container");
+
+function showSlides(n) {
+	let i;
+	if (n > slides.length - 1) {
 		slideIndex = 0;
 	}
-	slides.eq(slideIndex).show();
-	listItems.eq(slideIndex).addClass("active");
+	if (n < 0) {
+		slideIndex = slides.length - 1;
+	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+		slideListItems[i].classList.remove("active");
+	}
+	slides[slideIndex].style.display = "block";
+	slideListItems[slideIndex].classList.add("active");
+}
+
+function plusSlides(n) {
+	clearTimeout(timeoutId);
+	showSlides((slideIndex += n));
+	if (isPlaying) {
+		autoPlay();
+	}
 }
 
 function currentSlide(n) {
-	showSlide(slideIndex = n);
+	clearTimeout(timeoutId);
+	slideIndex = n;
+	showSlides(slideIndex);
+	if (isPlaying) {
+		autoPlay();
+	}
 }
 
-// Initial display
-showSlide(slideIndex);
-
-// Event listener for the list items
-listItems.on("click", function() {
-	let slideNumber = $(this).data("slide");
-	currentSlide(slideNumber);
-	stopAutoPlay(); // Stop auto-play when user clicks a list item
-});
-
-// Function for automatic slideshow
 function autoPlay() {
-	intervalId = setInterval(() => {
-		slideIndex++;
-		showSlide(slideIndex);
-	}, 5000);
+	timeoutId = setTimeout(() => {
+		plusSlides(1);
+	}, 3000);
 }
 
-// Function to stop automatic slideshow
-function stopAutoPlay() {
-	clearInterval(intervalId);
+function startSlideShow() {
+	if (!isPlaying) {
+		isPlaying = true;
+		startButton.textContent = "Pause";
+		autoPlay();
+	} else {
+		isPlaying = false;
+		startButton.textContent = "Start";
+		clearTimeout(timeoutId);
+	}
 }
 
-// Event listener for the start button
-$("#start").on("click", function() {
-	autoPlay(); // Start auto-play
-});
+function stopSlideShow() {
+	isPlaying = false;
+	startButton.textContent = "Start";
+	clearTimeout(timeoutId);
+	slideIndex = 0;
+	showSlides(slideIndex);
+}
 
-// Event listener for the stop button
-$("#stop").on("click", function() {
-	stopAutoPlay(); // Stop auto-play
-});
+function goToBeginning() {
+	clearTimeout(timeoutId);
+	slideIndex = 0;
+	showSlides(slideIndex);
+	if (isPlaying) {
+		autoPlay();
+	}
+}
 
-// Event listener for the forward button
-$("#forward").on("click", function() {
-	slideIndex++;
-	showSlide(slideIndex);
-	stopAutoPlay();
-});
+function goToEnd() {
+	clearTimeout(timeoutId);
+	slideIndex = slides.length - 1;
+	showSlides(slideIndex);
+	if (isPlaying) {
+		autoPlay();
+	}
+}
 
-// Event listener for the back button
-$("#backwards").on("click", function() {
-	slideIndex--;
-	showSlide(slideIndex);
-	stopAutoPlay();
-});
+function toggleFullScreen() {
+	if (slideshowContainer.requestFullscreen) {
+		slideshowContainer.requestFullscreen();
+	} else if (slideshowContainer.mozRequestFullScreen) {
+		slideshowContainer.mozRequestFullScreen();
+	} else if (slideshowContainer.webkitRequestFullscreen) {
+		slideshowContainer.webkitRequestFullscreen();
+	} else if (slideshowContainer.msRequestFullscreen) {
+		slideshowContainer.msRequestFullscreen();
+	}
+}
 
-// Event listener for the beginning button
-$("#beginning").on("click", function() {
-	showSlide(slideIndex = 0);
-	stopAutoPlay();
-});
-
-// Event listener for the end button
-$("#end").on("click", function() {
-	showSlide(slideIndex = slides.length - 1);
-	stopAutoPlay();
-});
-
-// Event listener for fullscreen
-$("#fullscreen").on("click", function() {
-	let container = $(".slideshow-container")[0];
-	if (container.requestFullscreen) {
-		container.requestFullscreen();
-	} else if (container.mozRequestFullScreen) { /* Firefox */
-		container.mozRequestFullScreen();
-	} else if (container.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-		container.webkitRequestFullscreen();
-	} else if (container.msRequestFullscreen) { /* IE/Edge */
-		container.msRequestFullscreen();
+document.addEventListener("keydown", (event) => {
+	if (event.key === "ArrowLeft") {
+		plusSlides(-1);
+	} else if (event.key === "ArrowRight") {
+		plusSlides(1);
+	} else if (event.key === "Escape") {
+		if (document.exitFullscreen) {
+			document.exitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if (document.webkitExitFullscreen) {
+			document.webkitExitFullscreen();
+		} else if (document.msExitFullscreen) {
+			document.msExitFullscreen();
+		}
 	}
 });
 
-// Optional: Automatic slideshow (for demonstration purposes)
-autoPlay(); // Start the slideshow automatically when the page loads
+slides.forEach((slide, index) => {
+	slide.addEventListener("click", () => {
+		currentSlide(index);
+	});
+});
+
+slideListItems.forEach((item, index) => {
+	item.addEventListener("click", () => {
+		currentSlide(index);
+	});
+});
+
+startButton.addEventListener("click", startSlideShow);
+stopButton.addEventListener("click", stopSlideShow);
+forwardButton.addEventListener("click", () => plusSlides(1));
+backButton.addEventListener("click", () => plusSlides(-1));
+beginningButton.addEventListener("click", goToBeginning);
+endButton.addEventListener("click", goToEnd);
+fullscreenButton.addEventListener("click", toggleFullScreen);
+
+showSlides(slideIndex);
