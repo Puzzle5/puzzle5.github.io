@@ -442,9 +442,10 @@ figcaption {
 .controls {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Add space between image and controls */
+    align-items: flex-start; /* Align items to the start (top) */
+    margin-top: 10px; /* Reset margin-top to a smaller value */
     gap: 15px;
+    flex-direction: column; /* Stack controls vertically */
 }
 
 .controls button {
@@ -456,6 +457,8 @@ figcaption {
     font-size: 16px;
     transition: background-color 0.3s ease;
     color: #333;
+    width: 100%; /* Make buttons take full width of container */
+    text-align: center; /* Center the text within the button */
 }
 
 .controls button:hover {
@@ -499,7 +502,11 @@ figcaption {
 
 .controls-container {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px; /* Add space between image and controls container */
+    justify-content: flex-start; /* Align items to the start (left in default direction) */
+    width: 60%; /* Match the width of the slideshow container */
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: stretch; /* Stretch items to container width */
+    margin-left: auto;
+    margin-right: auto;
 }
