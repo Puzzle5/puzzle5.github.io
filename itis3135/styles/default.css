@@ -444,6 +444,11 @@ figcaption {
     align-items: center;
     margin-top: 20px;
     gap: 15px;
+    position: absolute; /* Position absolutely */
+    bottom: 0;          /* At the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .controls button {
@@ -501,6 +506,7 @@ figcaption {
     justify-content: center;
     width: 100%;
     margin-top: 20px;
+    position: relative;
 }
 
 .timer-bar {
@@ -527,4 +533,15 @@ figcaption {
     to {
         width: 0%;
     }
+}
+
+/* Fullscreen Styles */
+.slideshow-container:fullscreen .controls,
+.slideshow-container:-webkit-full-screen .controls,
+.slideshow-container:-moz-full-screen .controls,
+.slideshow-container:-ms-fullscreen .controls {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
 }
