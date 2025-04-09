@@ -512,23 +512,21 @@ figcaption {
     background-color: rgba(0, 123, 255, 0.7);
     animation: timer-animation 5s linear infinite;
     animation-play-state: paused;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
     /* Removed border-radius */
+    overflow: hidden; /* Added to clip the rounded corners of the image */
 }
 
 .timer-bar.animate {
     animation-play-state: running;
-    border-radius: 8px; /* Added border-radius only for animation */
+    /* Removed border-radius from here */
 }
 
 @keyframes timer-animation {
     from {
         width: 100%;
-        border-radius: 8px; /* Added border-radius at start of animation */
+        /* Removed border-radius from here */
     }
     to {
         width: 0%;
-        border-radius: 0; /* Removed border-radius at end of animation */
     }
 }
