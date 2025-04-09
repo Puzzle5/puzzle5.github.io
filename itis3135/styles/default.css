@@ -22,39 +22,39 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Greyscale background */
-    color: #444; /* Darker text for better contrast on greyscale */
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
 a {
-    color: #6c757d; /* Darker blue/grey for links */
+    color: #a5d6a7;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #5a6268; /* Slightly darker hover color */
+    color: #81c784;
     transition: background-color 0.3s ease;
 }
 
 a:visited {
-    color: #6c757d;
+    color: #a5d6a7;
 }
 
 a:focus {
-    outline: 2px solid #6c757d; /* Focus outline */
+    outline: 2px solid #66bb6a;
 }
 
 h1,
 h2,
 h3 {
-    color: #6c757d; /* Darker heading color */
+    color: #98c379;
 }
 
 .button {
-    background-color: #868e96; /* Grey button */
-    color: #fff; /* White text on grey button */
+    background-color: #66bb6a;
+    color: #282c34;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -63,13 +63,13 @@ h3 {
 }
 
 .button:hover {
-    background-color: #5a6268; /* Darker grey hover */
+    background-color: #81c784;
 }
 
 nav {
     margin: 0 auto;
     padding: 20px;
-    background-color: #343a40; /* Darker nav background */
+    background-color: #282828;
 }
 
 nav > ul {
@@ -83,7 +83,7 @@ nav > ul {
 }
 
 nav > ul > li {
-    color: #e9ecef; /* Lighter text for dark nav */
+    color: #dfdfe2;
     margin: 0 0.2rem;
     padding: 0.2rem;
     display: block;
@@ -91,7 +91,7 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-    background-color: #495057; /* Slightly lighter hover for nav items */
+    background-color: #555;
     cursor: pointer;
 }
 
@@ -101,15 +101,15 @@ li > a {
 }
 
 .container {
-    background-color: #495057; /* Darker container */
+    background-color: #373e4a;
     padding: 20px;
     border-radius: 5px;
     margin: 10px 0;
 }
 
 main {
-    background-color: #495057; /* Darker main content area */
-    color: #e9ecef; /* Lighter text for dark main */
+    background-color: #373e4a;
+    color: #d1d5db;
     max-width: 1200px;
     margin: 20px auto;
     padding: 10px 20px;
@@ -133,7 +133,7 @@ main figcaption {
     font-style: italic;
     text-align: center;
     margin-top: 5px;
-    color: #ced4da; /* Lighter caption text */
+    color: #999;
 }
 
 main ul {
@@ -142,7 +142,7 @@ main ul {
 }
 
 main ul li strong {
-    color: #a5d6a7; /* Greenish accent, will keep */
+    color: #98c379;
 }
 
 .footer-items,
@@ -161,7 +161,7 @@ footer nav ul {
 
 .footer-items a,
 footer nav ul li a {
-    color: #66bb6a; /* Keep green for links in footer */
+    color: #66bb6a;
 }
 
 footer nav ul li a:hover {
@@ -169,7 +169,7 @@ footer nav ul li a:hover {
 }
 
 footer nav ul li:not(.separator):hover {
-    background-color: #495057; /* Slightly lighter hover */
+    background-color: #555;
     cursor: pointer;
 }
 
@@ -341,29 +341,29 @@ td {
 }
 
 th {
-    background-color: #343a40; /* Darker table header */
+    background-color: #282828;
     color: #fff;
 }
 
 tr:nth-child(even) {
-    background-color: #495057;
+    background-color: #4a5568;
     /* Darker alternating rows */
 }
 
 tr:nth-child(odd) {
-    background-color: #495057;
+    background-color: #373e4a;
     /* Lighter alternating rows */
 }
 
 tr:hover {
-    background-color: #6c757d;
+    background-color: #616e80;
 }
 
 /* Style for the caption */
 figcaption {
     margin-top: 10px;
     font-style: italic;
-    color: #ced4da; /* Lighter caption */
+    color: #999;
     text-align: center;
 }
 
@@ -392,7 +392,7 @@ figcaption {
 }
 
 .caption {
-    color: #e9ecef; /* Lighter text on dark background */
+    color: #222;
     font-size: 16px;
     padding: 10px 12px;
     position: absolute;
@@ -400,7 +400,7 @@ figcaption {
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(73, 80, 87, 0.7); /* Darker caption background */
+    background-color: rgba(255, 255, 255, 0.7);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     box-sizing: border-box;
@@ -422,19 +422,19 @@ figcaption {
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #e9ecef; /* Lighter list background */
+    background-color: #f2f2f2;
     transition: background-color 0.3s ease;
     font-size: 14px;
     white-space: nowrap;
-    color: #495057; /* Darker list text */
+    color: #444;
 }
 
 .slide-list li:hover {
-    background-color: #dee2e6; /* Slightly lighter hover for list */
+    background-color: #ddd;
 }
 
 .active {
-    background-color: #6c757d; /* Darker active color */
+    background-color: #4CAF50;
     color: white;
 }
 
@@ -450,15 +450,15 @@ figcaption {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #e9ecef; /* Lighter button background */
+    background-color: #f2f2f2;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    color: #495057; /* Darker button text */
+    color: #333;
 }
 
 .controls button:hover {
-    background-color: #dee2e6; /* Lighter hover for buttons */
+    background-color: #ddd;
 }
 
 .controls button i {
@@ -469,31 +469,31 @@ figcaption {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #e9ecef; /* Lighter button */
+    background-color: #f2f2f2;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
     margin-left: 20px;
-    color: #495057; /* Darker text */
+    color: #333;
 }
 
 .thumbs-like:hover {
-    background-color: #dee2e6; /* Lighter hover */
+    background-color: #ddd;
 }
 
 .full-screen {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #e9ecef; /* Lighter button */
+    background-color: #f2f2f2;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    color: #495057; /* Darker text */
+    color: #333;
 }
 
 .full-screen:hover {
-    background-color: #dee2e6; /* Lighter hover */
+    background-color: #ddd;
 }
 
 .controls-container {
@@ -509,151 +509,24 @@ figcaption {
     left: 0;
     width: 100%;
     height: 16px;
-    background-color: rgba(108, 117, 125, 0.7); /* Darker timer bar */
+    background-color: rgba(0, 123, 255, 0.7);
     animation: timer-animation 5s linear infinite;
     animation-play-state: paused;
-    overflow: hidden;
+    /* Removed border-radius */
+    overflow: hidden; /* Added to clip the rounded corners of the image */
 }
 
 .timer-bar.animate {
     animation-play-state: running;
+    /* Removed border-radius from here */
 }
 
 @keyframes timer-animation {
     from {
         width: 100%;
+        /* Removed border-radius from here */
     }
     to {
         width: 0%;
     }
 }
-
-/* Apply green tint if coin flip is true */
-body.green-theme {
-    background-color: #f0f4f0; /* Very light green */
-    color: #384338;
-}
-
-body.green-theme a {
-    color: #81c784; /* A light green */
-}
-
-body.green-theme a:hover {
-    color: #66bb6a;
-}
-
-body.green-theme h1,
-body.green-theme h2,
-body.green-theme h3 {
-    color: #81c784;
-}
-
-body.green-theme .button {
-    background-color: #a5d6a7;
-    color: #384338;
-}
-
-body.green-theme .button:hover {
-    background-color: #81c784;
-}
-
-body.green-theme nav {
-    background-color: #2e3b2e;
-}
-
-body.green-theme nav > ul > li {
-    color: #f1f8f1;
-}
-
-body.green-theme nav > ul > li:hover {
-    background-color: #435443;
-}
-
-body.green-theme .container {
-    background-color: #435443;
-}
-
-body.green-theme main {
-    background-color: #435443;
-    color: #f1f8f1;
-}
-
-body.green-theme main ul li strong {
-    color: #a5d6a7;
-}
-
-body.green-theme figcaption {
-    color: #d0f0d0;
-}
-
-body.green-theme table {
-    background-color: #435443;
-}
-
-body.green-theme th {
-    background-color: #2e3b2e;
-    color: #fff;
-}
-
-body.green-theme tr:nth-child(even) {
-    background-color: #4d604d;
-}
-
-body.green-theme tr:nth-child(odd) {
-    background-color: #435443;
-}
-
-body.green-theme tr:hover {
-    background-color: #627762;
-}
-
-body.green-theme .caption {
-    color: #f1f8f1;
-    background-color: rgba(67, 84, 67, 0.7);
-}
-
-body.green-theme .slide-list li {
-    background-color: #f1f8f1;
-    color: #435443;
-}
-
-body.green-theme .slide-list li:hover {
-    background-color: #e0f0e0;
-}
-
-body.green-theme .active {
-    background-color: #66bb6a;
-    color: white;
-}
-
-body.green-theme .controls button {
-    background-color: #f1f8f1;
-    color: #435443;
-}
-
-body.green-theme .controls button:hover {
-    background-color: #e0f0e0;
-}
-
-body.green-theme .thumbs-like {
-    background-color: #f1f8f1;
-    color: #435443;
-}
-
-body.green-theme .thumbs-like:hover {
-    background-color: #e0f0e0;
-}
-
-body.green-theme .full-screen {
-    background-color: #f1f8f1;
-    color: #435443;
-}
-
-body.green-theme .full-screen:hover {
-    background-color: #e0f0e0;
-}
-
-body.green-theme .timer-bar {
-    background-color: rgba(102, 187, 102, 0.7);
-}
-</script>
