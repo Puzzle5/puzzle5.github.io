@@ -394,19 +394,16 @@ figcaption {
 .caption {
     color: #222;
     font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: fit-content; /* Changed from 100% to fit-content */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    padding: 10px 12px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .slide-list {
