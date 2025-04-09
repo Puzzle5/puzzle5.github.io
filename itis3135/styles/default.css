@@ -520,7 +520,7 @@ figcaption {
     overflow: hidden;
 }
 
-.timer-bar.animate {
+.animate {
     animation-play-state: running;
 }
 
