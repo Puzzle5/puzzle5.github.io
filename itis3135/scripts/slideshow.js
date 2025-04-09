@@ -46,23 +46,6 @@ function autoPlay() {
 	}, 5000);
 }
 
-function plusSlides(n) {
-	clearTimeout(timeoutId);
-	showSlides((slideIndex += n));
-	if (isPlaying) {
-		autoPlay();
-	}
-}
-
-function currentSlide(n) {
-	clearTimeout(timeoutId);
-	slideIndex = n;
-	showSlides(slideIndex);
-	if (isPlaying) {
-		autoPlay();
-	}
-}
-
 function startSlideShow() {
 	if (!isPlaying) {
 		isPlaying = true;
@@ -121,6 +104,15 @@ function toggleFullScreen() {
 	}
 }
 
+function plusSlides(n) { // Function moved to be defined before autoPlay() and any other function that calls it.
+	clearTimeout(timeoutId);
+	showSlides((slideIndex += n));
+	if (isPlaying) {
+		autoPlay();
+	}
+}
+
+
 document.addEventListener("keydown", (event) => {
 	if (event.key === "ArrowLeft") {
 		plusSlides(-1);
@@ -150,6 +142,16 @@ slideListItems.forEach((item, index) => {
 		currentSlide(index);
 	});
 });
+
+function currentSlide(n) { // Function moved to be defined before being called.
+	clearTimeout(timeoutId);
+	slideIndex = n;
+	showSlides(slideIndex);
+	if (isPlaying) {
+		autoPlay();
+	}
+}
+
 
 startButton.addEventListener("click", startSlideShow);
 stopButton.addEventListener("click", stopSlideShow);
