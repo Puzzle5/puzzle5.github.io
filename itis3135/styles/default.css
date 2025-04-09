@@ -333,14 +333,18 @@ figcaption {
     color: #222;
     font-size: 16px;
     padding: 10px 12px;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 0;
+/*     bottom: 0; */
+/*     left: 0; */
     width: 100%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+/*     border-top-left-radius: 8px; */
+/*     border-top-right-radius: 8px; */
     box-sizing: border-box;
 }
 .slide-list {
