@@ -379,16 +379,16 @@ figcaption {
     gap: 15px;
 }
 .controls button {
-    padding: 8px;
+    padding: 6px;
     border: none;
     border-radius: 5px;
     background-color: #f2f2f2;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     transition: background-color 0.3s ease;
     color: #333;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
