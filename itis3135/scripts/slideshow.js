@@ -2,7 +2,7 @@ let slideIndex = 0;
 let timeoutId;
 let isPlaying = false;
 let timerBar;
-plusSlides(n);
+
 const slides = document.querySelectorAll(".mySlides");
 const slideListItems = document.querySelectorAll(".slide-list li");
 const startButton = document.getElementById("start");
