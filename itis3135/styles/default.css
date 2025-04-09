@@ -14,15 +14,14 @@ button,
 input,
 textarea,
 select {
-    box-sizing: inherit; /* Apply box-sizing from html */
+    box-sizing: inherit;
+    /* Apply box-sizing from html */
 }
 
 body {
-    background-color: #282c34;
-    color: #d1d5db;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
 }
@@ -292,7 +291,7 @@ form table {
 
 form td:first-child {
     width: 30%;
-/*     padding-right: 10px; */
+    /* padding-right: 10px; */
     vertical-align: top;
 }
 
@@ -365,4 +364,73 @@ figcaption {
     font-style: italic;
     color: #999;
     text-align: center;
+}
+
+/* Slideshow-specific CSS */
+.slideshow-container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.caption {
+    color: #222;
+    font-size: 16px;
+    padding: 10px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.slide-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+}
+
+.slide-list li {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    white-space: nowrap;
+    color: #444;
+}
+
+.slide-list li:hover {
+    background-color: #ddd;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
 }
