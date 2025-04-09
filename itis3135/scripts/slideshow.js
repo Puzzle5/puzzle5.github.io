@@ -46,6 +46,14 @@ function autoPlay() {
 	}, 5000);
 }
 
+function plusSlides(n) { // Function moved to be defined before autoPlay() and any other function that calls it.
+	clearTimeout(timeoutId);
+	showSlides((slideIndex += n));
+	if (isPlaying) {
+		autoPlay();
+	}
+}
+
 function startSlideShow() {
 	if (!isPlaying) {
 		isPlaying = true;
@@ -101,14 +109,6 @@ function toggleFullScreen() {
 		slideshowContainer.webkitRequestFullscreen();
 	} else if (slideshowContainer.msRequestFullscreen) {
 		slideshowContainer.msRequestFullscreen();
-	}
-}
-
-function plusSlides(n) { // Function moved to be defined before autoPlay() and any other function that calls it.
-	clearTimeout(timeoutId);
-	showSlides((slideIndex += n));
-	if (isPlaying) {
-		autoPlay();
 	}
 }
 
