@@ -342,6 +342,12 @@ figcaption {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.caption span {
+    margin-right: 10px;
 }
 .slide-list {
     list-style: none;
@@ -407,7 +413,7 @@ figcaption {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    margin-left: 20px;
+    margin-left: 0;
     color: #333;
 }
 .thumbs-like:hover {
