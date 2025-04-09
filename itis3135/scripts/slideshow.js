@@ -14,37 +14,6 @@ const endButton = document.getElementById("end");
 const fullscreenButton = document.getElementById("fullscreen");
 const slideshowContainer = document.querySelector(".slideshow-container");
 
-// Helper function to reset and start the timer
-function resetTimer() {
-	if (timerBar) {
-		timerBar.classList.remove("animate");
-		timerBar.style.width = "100%";
-	}
-	timerBar = slides[slideIndex].querySelector(".timer-bar");
-	timerBar.classList.add("animate");
-	timeoutId = setTimeout(() => {
-		plusSlides(1);
-	}, 5000);
-}
-
-// Define helper functions first, to avoid "used before defined"
-function plusSlides(n) {
-	clearTimeout(timeoutId);
-	showSlides((slideIndex += n));
-	if (isPlaying) {
-		resetTimer(); // Use the new function here
-	}
-}
-
-function currentSlide(n) {
-	clearTimeout(timeoutId);
-	slideIndex = n;
-	showSlides(slideIndex);
-	if (isPlaying) {
-		resetTimer(); // And here
-	}
-}
-
 function showSlides(n) {
 	let i;
 	if (n > slides.length - 1) {
@@ -61,13 +30,29 @@ function showSlides(n) {
 	slideListItems[slideIndex].classList.add("active");
 
 	// Clear any existing timer bar animation
-	resetTimer();
+	if (timerBar) {
+		timerBar.classList.remove("animate");
+		timerBar.style.width = "100%";
+	}
+	timerBar = slides[slideIndex].querySelector(".timer-bar");
+	//restartTimerBar();
 }
 
 function autoPlay() {
-	resetTimer(); // And here
+	timerBar = slides[slideIndex].querySelector(".timer-bar");
+	timerBar.classList.add("animate");
+	timeoutId = setTimeout(() => {
+		plusSlides(1);
+	}, 5000);
 }
 
+function plusSlides(n) { // Function moved to be defined before autoPlay() and any other function that calls it.
+	clearTimeout(timeoutId);
+	showSlides((slideIndex += n));
+	if (isPlaying) {
+		autoPlay();
+	}
+}
 
 function startSlideShow() {
 	if (!isPlaying) {
@@ -127,7 +112,18 @@ function toggleFullScreen() {
 	}
 }
 
-// Event listeners and initialization remain at the end
+
+
+function currentSlide(n) { // Function moved to be defined before being called.
+	clearTimeout(timeoutId);
+	slideIndex = n;
+	showSlides(slideIndex);
+	if (isPlaying) {
+		autoPlay();
+	}
+}
+
+
 document.addEventListener("keydown", (event) => {
 	if (event.key === "ArrowLeft") {
 		plusSlides(-1);
@@ -157,6 +153,8 @@ slideListItems.forEach((item, index) => {
 		currentSlide(index);
 	});
 });
+
+
 
 startButton.addEventListener("click", startSlideShow);
 stopButton.addEventListener("click", stopSlideShow);
