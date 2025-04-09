@@ -379,17 +379,17 @@ figcaption {
     gap: 15px;
 }
 .controls button {
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 5px;
     background-color: #f2f2f2;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s ease;
     color: #333;
-    width: 40px; /* Fixed width */
-    height: 40px; /* Fixed height */
-    display: flex; /* Use flexbox for centering */
+    width: 36px;
+    height: 36px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -397,7 +397,7 @@ figcaption {
     background-color: #ddd;
 }
 .controls button i {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 .thumbs-like {
     padding: 10px;
@@ -454,3 +454,4 @@ figcaption {
         width: 0%;
     }
 }
+

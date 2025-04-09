@@ -113,7 +113,7 @@ backButton.addEventListener("click", () => {
 	previousSlide();
 });
 stopButton.addEventListener("click", stopSlideshow);
-startButton.addEventListener("click", () => {
+startButton.addEventListener("click", () => {  // Corrected event listener
 	if (slideshowRunning) {
 		stopSlideshow();
 	} else {
