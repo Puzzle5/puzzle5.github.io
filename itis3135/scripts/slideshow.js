@@ -68,11 +68,11 @@ function autoPlay() {
 function startSlideShow() {
 	if (!isPlaying) {
 		isPlaying = true;
-		startButton.innerHTML = '<i class="fa fa-pause"></i>Pause';
+		startButton.innerHTML = '<i class="fa fa-pause"></i>';
 		autoPlay();
 	} else {
 		isPlaying = false;
-		startButton.innerHTML = '<i class="fa fa-play"></i>Start';
+		startButton.innerHTML = '<i class="fa fa-play"></i>';
 		clearTimeout(timeoutId);
 		if (timerBar) {
 			timerBar.classList.remove("animate");
@@ -83,7 +83,7 @@ function startSlideShow() {
 
 function stopSlideShow() {
 	isPlaying = false;
-	startButton.innerHTML = '<i class="fa fa-play"></i>Start';
+	startButton.innerHTML = '<i class="fa fa-play"></i>';
 	clearTimeout(timeoutId);
 	slideIndex = 0;
 	showSlides(slideIndex);
