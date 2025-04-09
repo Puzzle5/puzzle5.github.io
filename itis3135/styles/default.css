@@ -470,7 +470,7 @@ figcaption {
     margin: 0;
 }
 
-.thumbs-like {
+/*.thumbs-like {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -484,9 +484,9 @@ figcaption {
 
 .thumbs-like:hover {
     background-color: #ddd;
-}
+}*/
 
-.full-screen {
+/*.full-screen {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -499,7 +499,7 @@ figcaption {
 
 .full-screen:hover {
     background-color: #ddd;
-}
+}*/
 
 .controls-container {
     display: flex;
