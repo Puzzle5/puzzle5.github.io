@@ -19,11 +19,12 @@ select {
 }
 
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
 }
 
 a {
@@ -370,7 +371,7 @@ figcaption {
 .slideshow-container {
     position: relative;
     width: 60%;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 20px;
     overflow: hidden;
     border-radius: 8px;
@@ -434,3 +435,70 @@ figcaption {
     background-color: #4CAF50;
     color: white;
 }
+
+/* New styles for controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.controls button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    color: #333;
+}
+
+.controls button:hover {
+    background-color: #ddd;
+}
+
+.controls button i {
+    margin: 0 5px;
+}
+
+.thumbs-like {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    color: #333;
+}
+
+.thumbs-like:hover {
+    background-color: #ddd;
+}
+
+.full-screen {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    color: #333;
+}
+
+.full-screen:hover {
+    background-color: #ddd;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
