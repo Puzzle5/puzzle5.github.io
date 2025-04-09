@@ -217,6 +217,8 @@
             let animationFrameId;
             let slideDuration = 5000; // Initial slide duration
 
+
+            const slideshowContainer = document.getElementById("slideshow-container");
             const slideshowImage = document.getElementById("slideshow-image");
             const captionElement = document.getElementById("caption");
             const progressBar = document.getElementById("progress-bar");
@@ -312,7 +314,7 @@
 
             function updateProgressBar() {
                 if (!isPlaying) return;
-                timeElapsed += 16;
+                timeElapsed += 4.2;
                 const width = (timeElapsed / slideDuration) * 100;
                 progressBar.style.width = `${width}%`;
                 if (width >= 100) {
