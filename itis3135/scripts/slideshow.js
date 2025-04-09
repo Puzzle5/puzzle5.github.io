@@ -1,6 +1,7 @@
 let slideIndex = 0;
 let timeoutId;
 let isPlaying = false;
+let timerBar;
 
 const slides = document.querySelectorAll(".mySlides");
 const slideListItems = document.querySelectorAll(".slide-list li");
@@ -27,6 +28,14 @@ function showSlides(n) {
 	}
 	slides[slideIndex].style.display = "block";
 	slideListItems[slideIndex].classList.add("active");
+
+	// Clear any existing timer bar animation
+	if (timerBar) {
+		timerBar.classList.remove("animate");
+		timerBar.style.width = "100%";
+	}
+	timerBar = slides[slideIndex].querySelector(".timer-bar");
+	//restartTimerBar();
 }
 
 function plusSlides(n) {
@@ -47,29 +56,41 @@ function currentSlide(n) {
 }
 
 function autoPlay() {
+	timerBar = slides[slideIndex].querySelector(".timer-bar");
+	timerBar.classList.add("animate");
 	timeoutId = setTimeout(() => {
 		plusSlides(1);
-	}, 5000); // Changed from 3000 to 5000
+	}, 5000);
 }
+
+
 
 function startSlideShow() {
 	if (!isPlaying) {
 		isPlaying = true;
-		startButton.textContent = "Pause";
+		startButton.innerHTML = '<i class="fa fa-pause"></i>Pause';
 		autoPlay();
 	} else {
 		isPlaying = false;
-		startButton.textContent = "Start";
+		startButton.innerHTML = '<i class="fa fa-play"></i>Start';
 		clearTimeout(timeoutId);
+		if (timerBar) {
+			timerBar.classList.remove("animate");
+			timerBar.style.width = "100%";
+		}
 	}
 }
 
 function stopSlideShow() {
 	isPlaying = false;
-	startButton.textContent = "Start";
+	startButton.innerHTML = '<i class="fa fa-play"></i>Start';
 	clearTimeout(timeoutId);
 	slideIndex = 0;
 	showSlides(slideIndex);
+	if (timerBar) {
+		timerBar.classList.remove("animate");
+		timerBar.style.width = "100%";
+	}
 }
 
 function goToBeginning() {
