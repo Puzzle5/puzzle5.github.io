@@ -371,7 +371,7 @@ figcaption {
     position: relative;
     width: 60%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -433,7 +433,7 @@ figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0;
     gap: 15px;
 }
 .controls button {
@@ -496,7 +496,7 @@ figcaption {
     left: 0;
     width: 100%;
     height: 16px;
-    background-color: rgba(0, 123, 255, 0.7);
+    background-color: rgba(125, 123, 132, 0.7);
     animation: timer-animation 5s linear infinite;
     animation-play-state: paused;
     overflow: hidden;

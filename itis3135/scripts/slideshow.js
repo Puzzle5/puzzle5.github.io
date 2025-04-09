@@ -38,6 +38,14 @@ function showSlides(n) {
 	//restartTimerBar();
 }
 
+function autoPlay() {
+	timerBar = slides[slideIndex].querySelector(".timer-bar");
+	timerBar.classList.add("animate");
+	timeoutId = setTimeout(() => {
+		plusSlides(1);
+	}, 5000);
+}
+
 function plusSlides(n) {
 	clearTimeout(timeoutId);
 	showSlides((slideIndex += n));
@@ -54,16 +62,6 @@ function currentSlide(n) {
 		autoPlay();
 	}
 }
-
-function autoPlay() {
-	timerBar = slides[slideIndex].querySelector(".timer-bar");
-	timerBar.classList.add("animate");
-	timeoutId = setTimeout(() => {
-		plusSlides(1);
-	}, 5000);
-}
-
-
 
 function startSlideShow() {
 	if (!isPlaying) {
