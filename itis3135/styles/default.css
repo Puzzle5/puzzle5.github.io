@@ -394,7 +394,10 @@ figcaption {
 .caption {
     color: #222;
     font-size: 16px;
-    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
