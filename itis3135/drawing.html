@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <title>
+            Proud Cobra || ITIS-3135 || Homepage
+        </title>
+        <link rel="stylesheet" href="styles/default.css">
+    </head>
+    <body>
+        <div data-include="components/header.html"></div>
+        <main>
+            <h2>Interactive Drawing with p5.js</h2>
+            <p>This page uses p5.js to create an interactive drawing.</p>
+            <div id="p5-container">
+                </div>
+        </main>
+        <script>
+            function setup() {
+                let canvas = createCanvas(400, 400);
+                canvas.parent('p5-container'); // Append the canvas to the container
+                background(220);
+            }
+
+            function draw() {
+                if (mouseIsPressed) {
+                    fill(0);
+                    ellipse(mouseX, mouseY, 20, 20);
+                }
+            }
+        </script>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/include.min.js"></script>
+    </body>
+</html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Drawing with p5.js</title>
+    <meta name="description" content="Create interactive drawings with p5.js.">
+    <meta name="keywords" content="p5.js, drawing, interactive, creative coding">
+    <link rel="stylesheet" type="text/css" href="../styles/default.css">
+    <link rel="stylesheet" type="text/css" href="../styles/layout.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+    <script src="scripts/sketch.js"></script>
+    <style>
+        body {
+            margin: 0; /* Prevent default body margin */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full viewport height */
+            align-items: center; /* Center content horizontally */
+            justify-content: flex-start; /* Align content to the start (top) */
+        }
+        canvas {
+            display: block; /* Prevent extra space below the canvas */
+            margin-bottom: 20px; /* Add some margin below the canvas */
+        }
+        main {
+            flex: 1; /* Allow main to take up remaining vertical space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Name - ITIS3135</h1>
+    </header>
+    <nav id="nav">
+        <a href="../index.html">Home</a> |
+        <a href="../introduction.html">Introduction</a> |
+        <a href="../tables.html">Tables</a> |
+        <a href="../forms.html">Forms</a> |
+        <a href="../website-evaluations.html">Website Evaluations</a> |
+        <a href="../polygon.html">Polygon</a> |
+        <a href="../calculator.html">Calculator</a> |
+        <a href="../arrays.html">Arrays</a> |
+        <a href="../string.html">String</a> |
+        <a href="../dom.html">DOM</a> |
+        <a href="../slideshow.html">Slideshow</a> |
+        <a href="./drawing.html">Drawing</a>
+    </nav>
+
+    <main>
+        <h2>Interactive Drawing with p5.js</h2>
+        <p>This page uses p5.js to create an interactive drawing.</p>
+        <div id="p5-container">
+            </div>
+    </main>
+
+    <footer id="footer">
+        <a href="https://webpages.charlotte.edu/yourUNCCID">Webpages</a>
+        &copy; 2024 | Validate
+        <a href="https://validator.w3.org/check?uri=referer" aria-label="Validate HTML">HTML</a> |
+        <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" aria-label="Validate CSS">CSS</a>
+    </footer>
+
+
+</body>
+</html>
