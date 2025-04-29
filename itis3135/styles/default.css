@@ -539,9 +539,10 @@ canvas {
     margin-bottom: 20px; /* Add some margin below the canvas */
 }
 
-.canvas-main {
-    flex: 1; /* Allow main to take up remaining vertical space */
+/* Cannot get the box to align center to save my life */
+.canvas-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center; /* Centers the canvas horizontally within the div */
     align-items: center;
+    width: fit-content;
 }
